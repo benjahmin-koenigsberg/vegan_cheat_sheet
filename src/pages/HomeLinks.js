@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../compenents/Card';
 import { homeLinks } from "../home";
 
-export const HomePage = () => {
+export const HomeLinks = () => {
 
 const documentaries = homeLinks.filter(
   (links) => links.type === "documentaries"
