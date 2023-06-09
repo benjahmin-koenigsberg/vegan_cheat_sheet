@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import {homeLinks } from '../home';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Card from "../compenents/Card";
 
 export const LinksPage = () => {

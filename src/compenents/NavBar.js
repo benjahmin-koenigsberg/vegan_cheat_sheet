@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <div className="w-screen  bg-slate-300 p-3 position:fixed z-100">
+    <div className="w-screen  bg-slate-300 p-3 sticky top-[100vh] z-100">
       <ul className="flex justify-around">
         <Link to="/">
           <li>home</li>
