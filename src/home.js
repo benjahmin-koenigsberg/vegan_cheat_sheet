@@ -1,8 +1,224 @@
-/** @format */
+
+export const homeTopics = [
+  {
+    type: "🐮 Vegan Documentaries & Films",
+    name: "🐮 Vegan Documentaries & Films",
+    description: "Watch these documentaries with your friends and family!",
+    category: "",
+  },
+  {
+    type: "🐱 Vegan Inspirational Speeches",
+    name: "🐱 Vegan Inspirational Speeches",
+    description: "Watch some of the best vegan speeches on the internet!",
+    category: "",
+  },
+  {
+    type: "🐋 Must Read Books on Veganism",
+    name: "🐋 Must Read Books on Veganism",
+    description: "Check out the Books tab below for a bigger list!",
+    category: "",
+  },
+  {
+    type: "🦋 Arguments against Veganism Debunked",
+    name: "🦋 Arguments against Veganism Debunked",
+    description: "Videos and resources debunking common myths.",
+    category: "",
+  },
+  {
+    type: "🐦 Protein Myths Debunked",
+    name: "🐦 Protein Myths Debunked",
+    description: "Links to info regarding common protein myths!",
+    category: "",
+  },
+  {
+    type: "📰 Vegan Friendly News",
+    name: "📰 Vegan Friendly News",
+    description: "Sites that report on Veganism / Plant-based topics.",
+    category: "",
+  },
+  {
+    type: "🐕 Email Newsletters",
+    name: "🐕 Email Newsletters",
+    description: "Some Vegan mailing lists worth checking out.",
+    category: "",
+  },
+  {
+    type: "💻 Vegans Jobs and Entrepreneurship",
+    name: "💻 Vegans Jobs and Entrepreneurship",
+    description: "Vegan job boards and resources for entrepreneurs.",
+    category: "",
+  },
+  {
+    type: "🐼 Burnout / Emotional Support",
+    name: "🐼 Burnout / Emotional Support",
+    description: "Need to talk to someone? Feeling down / need support?",
+    category: "",
+  },
+  {
+    type: "🐯 Vegan Reddit Communites",
+    name: "🐯 Vegan Reddit Communites",
+    description: "Check out the Communities tab below for a bigger list!",
+    category: "",
+  },
+  {
+    type: "🐢 Vegan Health & Nutrition",
+    name: "🐢 Vegan Health & Nutrition",
+    description: "Learn the specifics to being healthy while vegan!",
+    category: "",
+  },
+  {
+    type: "🐗 Eating out as a Vegan",
+    name: "🐗 Eating out as a Vegan",
+    description: "Quick resources to help you find Vegan food locally!",
+    category: "",
+  },
+  {
+    type: "🍅 Great links for Vegan Recipes",
+    name: "🍅 Great links for Vegan Recipes",
+    description: "Find and cook delicious plant-based meals.",
+    category: "",
+  },
+  {
+    type: "🐀 Random / Uncategorized Links",
+    name: "🐀 Random / Uncategorized Links",
+    description: "Links that we don't specifically have a category.",
+    category: "",
+  },
+  {
+    type: "🐏 Random Links to help Activists",
+    name: "🐏 Random Links to help Activists",
+    description: "Random resources to help vegans with activism.",
+    category: "",
+  },
+  {
+    type: "🦍 Random studies/news released on Veganism",
+    name: "🦍 Random studies/news released on Veganism",
+    description: "Important studies/news on veganism to check up on.",
+    category: "",
+  },
+  {
+    type: "🦒 Random Blogs and Magazines",
+    name: "🦒 Random Blogs and Magazines",
+    description: "Blogs, News and Magazines worth reading.",
+    category: "",
+  },
+  {
+    type: "🐰 Online & Local Vegan Activism Organizations",
+    name: "🐰 Online & Local Vegan Activism Organizations",
+    description:
+      "Get out there and make a difference in the world for the animals!",
+    category: "",
+  },
+  {
+    type: "🐥 Veganism Health Consensus",
+    name: "🐥 Veganism Health Consensus",
+    description: "World Health & Nutrition Organizations on Veganism.",
+    category: "",
+  },
+  {
+    type: "🐎 Awesome Activists to Follow",
+    name: "🐎 Awesome Activists to Follow",
+    description: "These activists work day and night for a vegan world.",
+    category: "",
+  },
+  {
+    type: "🐍 Notable Vegan Celebrities",
+    name: "🐍 Notable Vegan Celebrities",
+    description: "Did you know that these celebs are also vegan?",
+    category: "",
+  },
+  {
+    type: "🦃 Environmental Statistics of Animal Agriculture",
+    name: "🦃 Environmental Statistics of Animal Agriculture",
+    description:
+      "These are verified statistics about the animals, planet, and health.",
+    category: "",
+  },
+  {
+    type: "🦍 iOS / Android Useful Vegan Apps",
+    name: "🦍 iOS / Android Useful Vegan Apps",
+    description: "Useful mobile apps for veganism that are must haves.",
+    category: "",
+  },
+  {
+    type: "🐤 Get Funding for Vegan Animal Rights Activism",
+    name: "🐤 Get Funding for Vegan Animal Rights Activism",
+    description:
+      "Leading animal rights organizations that provide funding for activists.",
+    category: "",
+  },
+  {
+    type: "🐵 Vegan Challenges",
+    name: "🐵 Vegan Challenges",
+    description: "Want to go Vegan? Help a friend go Vegan?",
+    category: "",
+  },
+  {
+    type: "🐎 Resources for new Vegans",
+    name: "🐎 Resources for new Vegans",
+    description: "Helpful resources for going Vegan!",
+    category: "",
+  },
+  {
+    type: "🐜 Easy Guide For Vegan Nutrition",
+    name: "🐜 Easy Guide For Vegan Nutrition",
+    description: "7 memes for quick vegan sources of nutritional needs.",
+    category: "",
+  },
+  {
+    type: "🍆 Vegan Cookbooks on Amazon",
+    name: "🍆 Vegan Cookbooks on Amazon",
+    description: "Awesome cookbooks all vegans should own.",
+    category: "",
+  },
+  {
+    type: "🦔 Published studies on the health of Soy",
+    name: "🦔 Published studies on the health of Soy",
+    description: "Not only safe for men, but deemed to be healthy.",
+    category: "",
+  },
+  {
+    type: "🦔 Vegan Video Playlists",
+    name: "🦔 Vegan Video Playlists",
+    description: "Fun video playlists revolving around Veganism!",
+    category: "",
+  },
+  {
+    type: "🐈 Caring for Vegan Companion Animals",
+    name: "🐈 Caring for Vegan Companion Animals",
+    description: "Studies, articles, videos, communities and information.",
+    category: "",
+  },
+  {
+    type: "🦇 Discord Communities",
+    name: "🦇 Discord Communities",
+    description: "Live chat vegan communities hosted by Discord.",
+    category: "",
+  },
+  {
+    type: "🦄 Vegans of Color",
+    name: "🦄 Vegans of Color",
+    description: "Links revolving around veganism and race.",
+    category: "",
+  },
+  {
+    type: "📢 Animal Liberation Front",
+    name: "📢 Animal Liberation Front",
+    description: "Info and links relating to ALF can be found here.",
+    category: "",
+  },
+  {
+    type: "🐟 Level 5 Veganism",
+    name: "🐟 Level 5 Veganism",
+    description: "Respect. Resources for advanced veganism.",
+    category: "",
+  },
+];
+
 
 export const homeLinks = [
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "⭐️ Dominion (2018)",
     category: "Animals",
     author: "",
@@ -10,7 +226,7 @@ export const homeLinks = [
     link: "https://www.youtube.com/watch?v=ny6aqdFy9SI",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Cowspiracy (2014)",
     category: "Environment",
     author: "",
@@ -18,7 +234,7 @@ export const homeLinks = [
     link: "https://www.netflix.com/watch/80033772",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "What The Health (2017)",
     category: "Health",
     author: "",
@@ -26,7 +242,7 @@ export const homeLinks = [
     link: "https://www.netflix.com/nl-en/title/80174177",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Forks Over Knives (2011)",
     category: "Health",
     author: "",
@@ -34,7 +250,7 @@ export const homeLinks = [
     link: "https://www.forksoverknives.com/the-film/",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Land of Hope and Glory (2017)",
     category: "Animals",
     author: "",
@@ -42,7 +258,7 @@ export const homeLinks = [
     link: "https://www.youtube.com/watch?v=dvtVkNofcq8",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Meet Your Meat (2012)",
     category: "Animals",
     author: "",
@@ -50,7 +266,7 @@ export const homeLinks = [
     link: "https://www.peta.org/videos/meet-your-meat/",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Speciesism: The Movie (2013)",
     category: "Animals",
     author: "",
@@ -58,7 +274,7 @@ export const homeLinks = [
     link: "https://speciesismthemovie.com/",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Earthlings (2005)",
     category: "Animals",
     author: "",
@@ -66,7 +282,7 @@ export const homeLinks = [
     link: "https://www.youtube.com/watch?v=8gqwpfEcBjI",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "The Game Changers (2019)",
     category: "Fitness",
     author: "",
@@ -74,7 +290,7 @@ export const homeLinks = [
     link: "https://gamechangersmovie.com/",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "My Octopus Teacher (2020)",
     category: "Environment",
     author: "",
@@ -82,7 +298,7 @@ export const homeLinks = [
     link: "https://www.netflix.com/title/81045007",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Milked (2021)",
     category: "Animals",
     author: "",
@@ -90,7 +306,7 @@ export const homeLinks = [
     link: "https://www.youtube.com/watch?v=MCwpsMtmMhM",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Seaspiracy (2021)",
     category: "Environment",
     author: "",
@@ -98,7 +314,7 @@ export const homeLinks = [
     link: "https://www.netflix.com/title/81014008",
   },
   {
-    type: "documentaries",
+    type: "🐮 Vegan Documentaries & Films",
     name: "Countdown To Year Zero (2019)",
     category: "Enviornment",
     author: "",

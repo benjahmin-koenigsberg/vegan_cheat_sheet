@@ -4,6 +4,7 @@ import {Routes, Route} from 'react-router-dom'
 import { HomeLinks } from "./pages/HomeLinks";
 import { Home } from './pages/Home';
 import { Categories } from './pages/Categories';
+import {LinksPage} from './pages/LinksPage'
 import NavBar from './compenents/NavBar';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path='/links' element={<LinksPage/>} />
           <Route path="/main" element={<HomeLinks />} />
         </Routes>
         <NavBar />

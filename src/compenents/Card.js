@@ -2,13 +2,13 @@
 
 import React from "react";
 
-function Card({ links }) {
+function Card({ link }) {
   return (
     <>
-      <a href={links.link} target="_blank">
+      <a href={link.link} target="_blank" rel="noreferrer">
         <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-          <h3>{links.name}</h3>
-          <p className="text-sm">{links.category}</p>
+          <h3>{link.name}</h3>
+          <p className="text-sm">{link.category}</p>
         </div>
       </a>
     </>
