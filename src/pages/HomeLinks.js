@@ -3,6 +3,8 @@ import Card from '../compenents/Card';
 import { homeLinks, homeTopics } from "../home";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { LinksPage } from './LinksPage';
+import { LinkCard } from '../compenents/LinkCard';
 
 export const HomeLinks = () => {
 
@@ -18,14 +20,15 @@ setPageTopics(selectedTopics)
 
   return (
     <div>
-      <header className="w-screen h-10px bg-slate-500 text-center p-2">
+      <header className="w-screen h-10px bg-red-500 text-center p-2">
         <h1 className="text-2xl rajdhani">Main</h1>
       </header>
-          <div onClick={upDatePage}>
-            {pageTopics.map((topic, index) => (
-              <Card key={index} topic={topic} />
-            ))}
-          </div>
+      <h1 className='text-2xl text-center p-1 bg-slate-200'>{header}</h1>
+      <div onClick={upDatePage}>
+        {pageTopics.map((topic, index) => (
+          <LinkCard key={index} topic={topic} />
+        ))}
+      </div>
     </div>
   );
 }
