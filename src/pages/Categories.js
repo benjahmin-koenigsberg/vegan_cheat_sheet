@@ -5,7 +5,7 @@ export const Categories = () => {
   return (
     <div>
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
-        <h1 className="text-xl">Categories</h1>
+        <h1 className="text-2xl rajdhani">Categories</h1>
       </header>
       <main>
         <Link to="/main">
