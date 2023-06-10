@@ -2,9 +2,9 @@ import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom'
 import { HomeLinks } from "./pages/HomeLinks";
-import { Home } from './pages/Home';
+import { Landing } from './pages/Landing';
 import { Categories } from './pages/Categories';
-import {LinksPage} from './pages/LinksPage'
+//import {LinksPage} from './pages/LinksPage'
 import NavBar from './compenents/NavBar';
 
 function App() {
@@ -12,10 +12,17 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path='/links' element={<LinksPage/>} />
-          <Route path="/main" element={<HomeLinks />} />
+          <Route path="/home" element={<HomeLinks />} />
+          <Route path="/studies" element={<HomeLinks />} />
+          <Route path="/forums" element={<HomeLinks />} />
+          <Route path="/books" element={<HomeLinks />} />
+          <Route path="/media" element={<HomeLinks />} />
+          <Route path="/fashion" element={<HomeLinks />} />
+          <Route path="/podcasts" element={<HomeLinks />} />
+          <Route path="/shopping" element={<HomeLinks />} />
+          <Route path="/faq" element={<HomeLinks />} />
         </Routes>
         <NavBar />
       </Router>

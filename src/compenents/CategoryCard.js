@@ -1,7 +1,7 @@
 import React from "react";
 //import {Link} from 'react-router-dom'
 
-function Card({ topic }) {
+function CategoryCard({ topic }) {
   console.log(topic.link)
   return (
     <>
@@ -15,4 +15,4 @@ function Card({ topic }) {
   );
 }
 
-export default Card;
+export default CategoryCard;

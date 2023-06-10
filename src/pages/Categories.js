@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 export const Categories = () => {
   return (
     <div>
@@ -8,58 +9,93 @@ export const Categories = () => {
         <h1 className="text-2xl rajdhani">Categories</h1>
       </header>
       <main>
-        <Link to="/main">
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Main</h3>
-            <p className="text-sm"></p>
+        <Link to="/home">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-red-700 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">HOME</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Studies</h3>
-            <p className="text-sm"></p>
+        <Link to="/studies">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-green-400 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">STUDIES</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Forums</h3>
-            <p className="text-sm"></p>
+        <Link to="/forums">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-orange-400 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">FORUMS</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Books</h3>
-            <p className="text-sm"></p>
+        <Link to="/books">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-blue-500 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">BOOKS</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Media</h3>
-            <p className="text-sm"></p>
+        <Link to="/media">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-purple-400 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">MEDIA</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Fashion</h3>
-            <p className="text-sm"></p>
+        <Link to="/fashion">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-zinc-300 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">FASHION</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Podcasts</h3>
-            <p className="text-sm"></p>
+        <Link to="/podcasts">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-amber-900 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">PODCASTS</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>Shopping</h3>
-            <p className="text-sm"></p>
+        <Link>
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-slate-700 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">SHOPPING</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
-        <Link >
-          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center">
-            <h3>FAQ</h3>
-            <p className="text-sm"></p>
+        <Link to="/faq">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <div className="h-5 w-5 rounded-3xl bg-yellow-300 flex m-auto mr-2 "></div>
+              <h3 className="justify-center m-auto text-xl">FAQ</h3>
+              <p className="text-sm"></p>
+            </div>
+          </div>
+        </Link>
+        <Link to="/faq">
+          <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
+            <div className="flex justify-start">
+              <h3 className="justify-center m-auto text-xl">DONATE</h3>
+              <p className="text-sm"></p>
+            </div>
           </div>
         </Link>
       </main>

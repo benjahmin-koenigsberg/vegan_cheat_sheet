@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../veganCheatSheet.png'
 
-export const Home = () => {
+export const Landing = () => {
   return (
     <div>
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
