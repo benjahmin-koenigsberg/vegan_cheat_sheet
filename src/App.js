@@ -12,6 +12,7 @@ import {FashionLinks} from './pages/FashionLinks';
 import {PodcastLinks} from './pages/PodcastLinks'
 import {ShoppingLinks} from './pages/ShoppingLinks'
 import {FaqLinks} from './pages/FaqLinks'
+import { Favorites } from './pages/Favorites';
 
 //import {LinksPage} from './pages/LinksPage'
 import NavBar from './compenents/NavBar';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/podcasts" element={<PodcastLinks />} />
           <Route path="/shopping" element={<ShoppingLinks />} />
           <Route path="/faq" element={<FaqLinks />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
         <NavBar />
       </Router>
