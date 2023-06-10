@@ -8,9 +8,8 @@ const [favorite, setFavorite] = useState(false)
 
 
 const addToFavorites = () => {
-
-localStorage.setItem( 'name' , topic.name)
-localStorage.setItem('link', topic.link);
+localStorage.setItem('name', JSON.stringify(topic.name))
+localStorage.setItem("link", JSON.stringify(topic.link));
 setFavorite(true)
 }
 

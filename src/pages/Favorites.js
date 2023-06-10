@@ -14,17 +14,23 @@ const [pageTopics, setPageTopics] = useState([]);
 const [header, setHeader] = useState(null);
 
 useEffect(()=>{
+const favsArr = []
+const getAllStorage = () => {
 
-function allStorage() {
-  var archive = [];
-  for (let i = 0; i < localStorage.length; i++) {
-    archive[i] = localStorage.getItem(localStorage.key(i));
-  }
-console.log(archive)
-setPageTopics(archive);
+for (let i = 0; i<localStorage.length; i++){
+const name = localStorage.getItem("name");
+console.log(name);
+const link = localStorage.getItem("link");
+console.log(link);
+const favObj = {name: name, link: link}
+favsArr.push(favObj)
 }
-allStorage()
 
+favsArr.push()
+console.log(favsArr)
+setPageTopics(favsArr)
+}
+getAllStorage()
 },[])
 
 
