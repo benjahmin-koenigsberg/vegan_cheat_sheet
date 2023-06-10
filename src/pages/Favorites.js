@@ -16,10 +16,10 @@ const [header, setHeader] = useState(null);
 useEffect(()=>{
 
 function allStorage() {
-const archive = []
-for (let i = 0; i<localStorage.length; i++){
-    archive[i] = localStorage.getItem(localStorage.key(i))
-}
+  var archive = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    archive[i] = localStorage.getItem(localStorage.key(i));
+  }
 console.log(archive)
 setPageTopics(archive);
 }
