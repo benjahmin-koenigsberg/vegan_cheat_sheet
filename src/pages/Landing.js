@@ -21,14 +21,14 @@ export const Landing = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <a href='https://www.veganhacktivists.org' target='_blank'>
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
             <h3 className="text-4xl">Vegan hacktivists</h3>
             <p className="text-lg">
               🦆 This sheet is maintained by VeganHacktivists.org
             </p>
           </div>
-        </Link>
+        </a>
         <Link>
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
             <h3 className="text-4xl">Donate</h3>

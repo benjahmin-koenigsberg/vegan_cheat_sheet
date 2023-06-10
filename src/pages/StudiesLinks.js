@@ -7,7 +7,7 @@ import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const StudiesLinks = () => {
-  const [pageTopics, setPageTopics] = useState(homeTopics);
+  const [pageTopics, setPageTopics] = useState([]);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
@@ -19,7 +19,7 @@ export const StudiesLinks = () => {
   };
 
   const refreshTopics = () => {
-    setPageTopics(homeTopics);
+    setPageTopics([]);
     setHeader("");
   };
 

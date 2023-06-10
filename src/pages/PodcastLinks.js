@@ -21,7 +21,7 @@ export const PodcastLinks = () => {
   };
 
   const refreshTopics = () => {
-    setPageTopics(homeTopics);
+    setPageTopics([]);
     setHeader("");
   };
 

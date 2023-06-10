@@ -21,7 +21,7 @@ export const FaqLinks = () => {
   };
 
   const refreshTopics = () => {
-    setPageTopics(homeTopics);
+    setPageTopics([]);
     setHeader("");
   };
 

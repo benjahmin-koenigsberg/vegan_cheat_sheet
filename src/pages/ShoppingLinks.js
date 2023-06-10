@@ -19,7 +19,7 @@ export const ShoppingLinks = () => {
   };
 
   const refreshTopics = () => {
-    setPageTopics(homeTopics);
+    setPageTopics([]);
     setHeader("");
   };
 

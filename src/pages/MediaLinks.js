@@ -9,7 +9,7 @@ import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const MediaLinks = () => {
-  const [pageTopics, setPageTopics] = useState(homeTopics);
+  const [pageTopics, setPageTopics] = useState([]);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
@@ -21,7 +21,7 @@ export const MediaLinks = () => {
   };
 
   const refreshTopics = () => {
-    setPageTopics(homeTopics);
+    setPageTopics([]);
     setHeader("");
   };
 
