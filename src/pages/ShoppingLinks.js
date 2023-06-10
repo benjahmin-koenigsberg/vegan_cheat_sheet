@@ -1,5 +1,3 @@
-/** @format */
-
 import React from "react";
 //import Card from "../compenents/CategoryCard";
 import { homeLinks, homeTopics } from "../home";
@@ -8,8 +6,8 @@ import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
-export const MediaLinks = () => {
-  const [pageTopics, setPageTopics] = useState(homeTopics);
+export const ShoppingLinks = () => {
+  const [pageTopics, setPageTopics] = useState([]);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
@@ -27,8 +25,8 @@ export const MediaLinks = () => {
 
   return (
     <div>
-      <header className="w-screen h-10px bg-purple-400 text-center p-2">
-        <h1 className="text-2xl rajdhani">MEDIA</h1>
+      <header className="w-screen h-10px bg-slate-700 text-center p-2">
+        <h1 className="text-2xl rajdhani">SHOPPING</h1>
 
         {header ? (
           <button

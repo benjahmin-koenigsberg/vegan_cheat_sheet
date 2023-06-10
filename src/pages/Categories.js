@@ -21,7 +21,7 @@ export const Categories = () => {
         <Link to="/studies">
           <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
             <div className="flex justify-start">
-              <div className="h-5 w-5 rounded-3xl bg-green-400 flex m-auto mr-2 "></div>
+              <div className="h-5 w-5 rounded-3xl bg-green-500 flex m-auto mr-2 "></div>
               <h3 className="justify-center m-auto text-xl">STUDIES</h3>
               <p className="text-sm"></p>
             </div>
@@ -72,7 +72,7 @@ export const Categories = () => {
             </div>
           </div>
         </Link>
-        <Link>
+        <Link to="/shopping">
           <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
             <div className="flex justify-start">
               <div className="h-5 w-5 rounded-3xl bg-slate-700 flex m-auto mr-2 "></div>
@@ -90,14 +90,14 @@ export const Categories = () => {
             </div>
           </div>
         </Link>
-        <Link to="/faq">
+        <a href="https://veganhacktivists.org/support">
           <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
             <div className="flex justify-start">
               <h3 className="justify-center m-auto text-xl">DONATE</h3>
               <p className="text-sm"></p>
             </div>
           </div>
-        </Link>
+        </a>
       </main>
     </div>
   );
