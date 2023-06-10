@@ -8,9 +8,9 @@ import IgLogo from '../instagram.svg'
 export const Landing = () => {
   return (
     <div>
-      <header className="w-screen h-10px bg-slate-500 text-center p-2">
-        <img className="m-auto" src={logo} />
-        <h1 className="text-2xl rajdhani">The Vegan Cheat Sheet</h1>
+      <header className="w-screen h-10px bg-indigo-950 text-center p-2">
+        <img className="m-auto h-35" src={logo} />
+        <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
       </header>
       <main>
         <Link to="/categories">
