@@ -2,18 +2,17 @@
 
 import React from "react";
 //import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../home";
+import { homeLinks, homeTopics } from "../data/home";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const Favorites = () => {
+  const [pageTopics, setPageTopics] = useState([]);
+  const [header, setHeader] = useState(null);
 
-const [pageTopics, setPageTopics] = useState([]);
-const [header, setHeader] = useState(null);
-
-console.log()
+  console.log();
 
   const upDatePage = (e) => {
     const selectedTopics = homeLinks.filter(
@@ -28,9 +27,7 @@ console.log()
     setHeader("");
   };
 
-
-const clearFavs = () => {
-}
+  const clearFavs = () => {};
 
   return (
     <div className="flex flex-col">

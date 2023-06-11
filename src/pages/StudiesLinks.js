@@ -1,21 +1,27 @@
+/** @format */
+
 import React from "react";
 //import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../home";
+import { studyLinks, studyTopics } from "../data/studies";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const StudiesLinks = () => {
-  const [pageTopics, setPageTopics] = useState([]);
+  const [pageTopics, setPageTopics] = useState(studyTopics);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
-    const selectedTopics = homeLinks.filter(
-      (topic) => topic.type === e.target.innerText
-    );
-    setHeader(e.target.innerText);
-    setPageTopics(selectedTopics);
+    if (!header) {
+      const selectedTopics = studyLinks.filter(
+        (topic) => topic.type === e.target.innerText
+      );
+      setHeader(e.target.innerText);
+      setPageTopics(selectedTopics);
+    } else {
+      return;
+    }
   };
 
   const refreshTopics = () => {
@@ -25,7 +31,7 @@ export const StudiesLinks = () => {
 
   return (
     <div>
-      <header className="w-screen h-10px  bg-green-500 text-center p-2">
+      <header className="w-screen h-10px bg-green-500 text-center p-2">
         <h1 className="text-2xl rajdhani">STUDIES</h1>
 
         {header ? (

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { homeLinks } from "../home";
+import { homeLinks } from "../data/home";
 import { Link } from "react-router-dom";
 import Card from "../compenents/CategoryCard";
 

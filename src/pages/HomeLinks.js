@@ -1,6 +1,8 @@
+/** @format */
+
 import React from "react";
 //import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../home";
+import { homeLinks, homeTopics } from "../data/home";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
@@ -17,19 +19,15 @@ export const HomeLinks = () => {
       );
       setHeader(e.target.innerText);
       setPageTopics(selectedTopics);
+    } else {
+      return;
     }
-    else {
-      return
-    }
-  }
+  };
 
-
-
-
-const refreshTopics = () => {
-  setPageTopics(homeTopics)
-  setHeader('')
-}
+  const refreshTopics = () => {
+    setPageTopics(homeTopics);
+    setHeader("");
+  };
 
   return (
     <div>
