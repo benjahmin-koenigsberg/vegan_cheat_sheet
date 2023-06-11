@@ -11,12 +11,20 @@ export const HomeLinks = () => {
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
-    const selectedTopics = homeLinks.filter(
-      (topic) => topic.type === e.target.innerText
-    );
-    setHeader(e.target.innerText);
-    setPageTopics(selectedTopics);
-  };
+    if (!header) {
+      const selectedTopics = homeLinks.filter(
+        (topic) => topic.type === e.target.innerText
+      );
+      setHeader(e.target.innerText);
+      setPageTopics(selectedTopics);
+    }
+    else {
+      return
+    }
+  }
+
+
+
 
 const refreshTopics = () => {
   setPageTopics(homeTopics)
