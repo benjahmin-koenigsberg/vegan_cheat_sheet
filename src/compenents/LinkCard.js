@@ -1,12 +1,22 @@
 import {useState} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { v4 as uuidv4 } from "uuid";
+
 
 export const LinkCard = ({ topic }) => {
 
 const [isFavorite, setIsFavorite] = useState(false)
-
+const id = uuidv4()
 const addToFavorites = () => {
+
+const favObj = {
+  name: topic.name,
+  link: topic.link
+}
+
+localStorage.setItem(id, JSON.stringify(favObj))
+
 if (!isFavorite) {
 setIsFavorite(true);
 } else {

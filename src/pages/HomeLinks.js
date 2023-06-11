@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-//import Card from "../compenents/CategoryCard";
 import { homeLinks, homeTopics } from "../data/home";
 import { useState } from "react";
 import { Link } from "react-router-dom";

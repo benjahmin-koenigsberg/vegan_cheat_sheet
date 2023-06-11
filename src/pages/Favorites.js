@@ -1,18 +1,34 @@
 /** @format */
 
 import React from "react";
-//import Card from "../compenents/CategoryCard";
 import { homeLinks, homeTopics } from "../data/home";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
+import { faV } from "@fortawesome/free-solid-svg-icons";
+import FavoritesCard from "../compenents/FavoritesCard";
 
 export const Favorites = () => {
   const [pageTopics, setPageTopics] = useState([]);
   const [header, setHeader] = useState(null);
 
-  console.log();
+useEffect(()=>{
+  const getStorage = () => {
+    let favArr = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      let favObj = localStorage.getItem(localStorage.key(i));
+      if (favObj !== 'INFO')
+      favArr.push(JSON.parse(favObj));
+      setPageTopics(favArr);
+    }
+  };
+
+  getStorage();
+
+
+}, [])
+
 
   const upDatePage = (e) => {
     const selectedTopics = homeLinks.filter(
@@ -27,7 +43,10 @@ export const Favorites = () => {
     setHeader("");
   };
 
-  const clearFavs = () => {};
+  const clearFavs = () => {
+    localStorage.clear()
+    setPageTopics([])
+  };
 
   return (
     <div className="flex flex-col">
@@ -53,7 +72,7 @@ export const Favorites = () => {
       </div>
       <div onClick={upDatePage}>
         {pageTopics.map((topic, index) => (
-          <LinkCard key={index} topic={topic} />
+          <FavoritesCard key={index} topic={topic} />
         ))}
       </div>
       <button

@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import { homeLinks } from "../data/home";
 import { Link } from "react-router-dom";
-import Card from "../compenents/CategoryCard";
+import Card from "../compenents/FavoritesCard";
 
 export const LinksPage = () => {
   const [links, setLinks] = useState(homeLinks);
