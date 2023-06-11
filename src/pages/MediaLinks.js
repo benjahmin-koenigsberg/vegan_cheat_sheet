@@ -1,27 +1,30 @@
 /** @format */
 
 import React from "react";
-//import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../data/home";
+import { mediaLinks, mediaTopics } from "../data/media";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const MediaLinks = () => {
-  const [pageTopics, setPageTopics] = useState([]);
+  const [pageTopics, setPageTopics] = useState(mediaTopics);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
-    const selectedTopics = homeLinks.filter(
-      (topic) => topic.type === e.target.innerText
-    );
-    setHeader(e.target.innerText);
-    setPageTopics(selectedTopics);
+    if (!header) {
+      const selectedTopics = mediaLinks.filter(
+        (topic) => topic.type === e.target.innerText
+      );
+      setHeader(e.target.innerText);
+      setPageTopics(selectedTopics);
+    } else {
+      return;
+    }
   };
 
   const refreshTopics = () => {
-    setPageTopics([]);
+    setPageTopics(mediaTopics);
     setHeader("");
   };
 

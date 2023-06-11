@@ -12,7 +12,9 @@ const addToFavorites = () => {
 
 const favObj = {
   name: topic.name,
-  link: topic.link
+  link: topic.link,
+  type: topic.type,
+  category: topic.category
 }
 
 localStorage.setItem(id, JSON.stringify(favObj))
@@ -28,19 +30,23 @@ console.log()
   return (
     <>
       <div className="w-50 h-auto border p-1 m-2 shadow-lg cursor-pointer text-center">
-        <h3 className="p-1">{topic?.name}</h3>
+        <h3 className="p-1">{topic.name}</h3>
         <p className="">{topic?.description}</p>
         <p className="">{topic?.category}</p>
+        <p className="">{topic.autor? 'By' : ''} {topic?.author}</p>
+
         {topic.link ? (
           <div>
-            <a href={topic?.link}>
+            <a href={topic?.link} target='_blank'>
               <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
                 Link
               </button>
             </a>
-            <button className="bg-gray-200 text-black font-bold px-2 rounded m-1" onClick={addToFavorites} >
+            <button
+              className="bg-gray-200 text-black font-bold px-2 rounded m-1"
+              onClick={addToFavorites}>
               <FontAwesomeIcon icon={faHeart} className="text-red-500 mr-2" />
-               {(!isFavorite) ? 'Add to Favorites' : 'Added to Favorites'}
+              {!isFavorite ? "Add to Favorites" : "Added to Favorites"}
             </button>
           </div>
         ) : (

@@ -27,7 +27,7 @@ const NavBar = () => {
             </li>
           </div>
         </Link>
-        <a href="https://veganhacktivists.org/support" target="_blank">
+        {/* <a href="https://veganhacktivists.org/support" target="_blank">
           <div className="flex-col">
             <li>
               <FontAwesomeIcon
@@ -35,7 +35,7 @@ const NavBar = () => {
                 className="text-2xl text-yellow-700 font-bold"></FontAwesomeIcon>
             </li>
           </div>
-        </a>
+        </a> */}
         <Link to="/favorites">
           <div className="flex-col">
             <li>

@@ -1,27 +1,28 @@
-/** @format */
-
 import React from "react";
-//import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../data/home";
+import { forumLinks, forumTopics } from "../data/forums";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const ForumLinks = () => {
-  const [pageTopics, setPageTopics] = useState([]);
+  const [pageTopics, setPageTopics] = useState(forumTopics);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
-    const selectedTopics = homeLinks.filter(
-      (topic) => topic.type === e.target.innerText
-    );
-    setHeader(e.target.innerText);
-    setPageTopics(selectedTopics);
+    if (!header) {
+      const selectedTopics = forumLinks.filter(
+        (topic) => topic.type === e.target.innerText
+      );
+      setHeader(e.target.innerText);
+      setPageTopics(selectedTopics);
+    } else {
+      return;
+    }
   };
 
   const refreshTopics = () => {
-    setPageTopics([]);
+    setPageTopics(forumTopics);
     setHeader("");
   };
 

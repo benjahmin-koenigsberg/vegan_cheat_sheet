@@ -29,7 +29,7 @@ export const Landing = () => {
             </p>
           </div>
         </a>
-        <Link>
+        <Link to='/donate'>
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
             <h3 className="text-4xl">Donate</h3>
             <p className="text-lg">

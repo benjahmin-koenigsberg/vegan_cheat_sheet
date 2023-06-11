@@ -92,7 +92,7 @@ export const Categories = () => {
             </div>
           </div>
         </Link>
-        <a href="https://veganhacktivists.org/support" target='_blank'>
+        <Link to="/donate">
           <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
             <div className="flex justify-start">
               <FontAwesomeIcon icon={faHeart} className='m-auto mr-2 text-red-500 text-2xl'>
@@ -101,7 +101,7 @@ export const Categories = () => {
               <p className="text-sm"></p>
             </div>
           </div>
-        </a>
+        </Link>
       </main>
     </div>
   );

@@ -6,9 +6,11 @@ function FavoritesCard({ topic }) {
   return (
     <>
       <div className="w-50 h-auto border p-1 m-2 shadow-lg cursor-pointer text-center">
+        <p>{topic?.category}</p>
         <h3 className="p-1">{topic?.name}</h3>
-        <p className="">{topic?.description}</p>
-        <p className="">{topic?.category}</p>
+        <p>{topic?.type}</p>
+        <p>{topic?.description}</p>
+
         {topic.link ? (
           <div>
             <a href={topic?.link}>

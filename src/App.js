@@ -13,6 +13,7 @@ import {FashionLinks} from './pages/FashionLinks';
 import {PodcastLinks} from './pages/PodcastLinks'
 import {ShoppingLinks} from './pages/ShoppingLinks'
 import {FaqLinks} from './pages/FaqLinks'
+import { Donate } from './pages/Donate';
 import { Favorites } from './pages/Favorites';
 
 //import {LinksPage} from './pages/LinksPage'
@@ -28,12 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/categories" element={<Categories />} />
-          <Route
-            path="/home"
-            element={
-              <HomeLinks  />
-            }
-          />
+          <Route path="/home" element={<HomeLinks />} />
           <Route path="/studies" element={<StudiesLinks />} />
           <Route path="/forums" element={<ForumLinks />} />
           <Route path="/books" element={<BookLinks />} />
@@ -42,12 +38,9 @@ function App() {
           <Route path="/podcasts" element={<PodcastLinks />} />
           <Route path="/shopping" element={<ShoppingLinks />} />
           <Route path="/faq" element={<FaqLinks />} />
-          <Route
-            path="/favorites"
-            element={
-              <Favorites  />
-            }
-          />
+          <Route path="/donate" element={<Donate />} />
+
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
         <NavBar />
       </Router>
