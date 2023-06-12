@@ -1,33 +1,39 @@
 /** @format */
 
 import React from "react";
-//import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../data/home";
+import { fashionLinks, fashionTopics } from "../data/fashion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const FashionLinks = () => {
-  const [pageTopics, setPageTopics] = useState([]);
+  const [pageTopics, setPageTopics] = useState(fashionTopics);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
-    const selectedTopics = homeLinks.filter(
-      (topic) => topic.type === e.target.innerText
-    );
-    setHeader(e.target.innerText);
-    setPageTopics(selectedTopics);
+    if (!header) {
+      // const selectedTopics = fashionLinks.filter(
+      //   (topic) => topic.type === e.target.innerText
+      // );
+      const selectedTopics = fashionLinks;
+      setHeader(e.target.innerText);
+      setPageTopics(selectedTopics);
+    } else {
+      return;
+    }
   };
 
+  console.log(fashionLinks)
+
   const refreshTopics = () => {
-    setPageTopics([]);
+    setPageTopics(fashionTopics);
     setHeader("");
   };
 
   return (
-    <div>
-      <header className="w-screen h-10px bg-zinc-300 text-center p-2">
+    <div className="pb-2 grow-1 overflow-scroll min-h-[100vh]">
+      <header className="w-screen h-10px bg-zinc-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FASHION</h1>
 
         {header ? (

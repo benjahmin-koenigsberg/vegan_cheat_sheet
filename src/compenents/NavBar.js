@@ -9,7 +9,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   return (
-    <div className="w-screen  bg-slate-300 p-4 h-fit sticky top-auto z-100">
+    <div className="w-screen  bg-slate-300 p-4 h-fit mt-auto z-100 ">
       <ul className="flex justify-around">
         <Link to="/">
           <div className="flex-col">

@@ -15,7 +15,7 @@ import {ShoppingLinks} from './pages/ShoppingLinks'
 import {FaqLinks} from './pages/FaqLinks'
 import { Donate } from './pages/Donate';
 import { Favorites } from './pages/Favorites';
-
+import {SumbmitLink} from './pages/SubmitLink'
 //import {LinksPage} from './pages/LinksPage'
 import NavBar from './compenents/NavBar';
 
@@ -39,8 +39,8 @@ function App() {
           <Route path="/shopping" element={<ShoppingLinks />} />
           <Route path="/faq" element={<FaqLinks />} />
           <Route path="/donate" element={<Donate />} />
-
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/submit" element={<SumbmitLink />} />
         </Routes>
         <NavBar />
       </Router>

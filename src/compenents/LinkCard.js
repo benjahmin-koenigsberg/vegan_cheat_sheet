@@ -17,7 +17,7 @@ const favObj = {
   category: topic.category
 }
 
-localStorage.setItem(id, JSON.stringify(favObj))
+localStorage.setItem(topic.name, JSON.stringify(favObj))
 
 if (!isFavorite) {
 setIsFavorite(true);
@@ -42,12 +42,14 @@ console.log()
                 Link
               </button>
             </a>
+            <div>
             <button
               className="bg-gray-200 text-black font-bold px-2 rounded m-1"
               onClick={addToFavorites}>
               <FontAwesomeIcon icon={faHeart} className="text-red-500 mr-2" />
               {!isFavorite ? "Add to Favorites" : "Added to Favorites"}
             </button>
+            </div>
           </div>
         ) : (
           ""

@@ -1,22 +1,46 @@
 import React from "react";
 //import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-function FavoritesCard({ topic }) {
+
+function FavoritesCard({ topic, setPageTopics }) {
   console.log(topic.link)
+
+
+const unFavorite = () => {
+localStorage.removeItem(topic.name)
+
+  const getStorage = () => {
+    let favArr = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      let favObj = localStorage.getItem(localStorage.key(i));
+      if (favObj !== "INFO") favArr.push(JSON.parse(favObj));
+      setPageTopics(favArr);
+      document.location.reload();
+    }
+  };
+
+  getStorage();
+}
+
+
   return (
     <>
       <div className="w-50 h-auto border p-1 m-2 shadow-lg cursor-pointer text-center">
-        <p>{topic?.category}</p>
-        <h3 className="p-1">{topic?.name}</h3>
         <p>{topic?.type}</p>
+        <h3 className="p-1">{topic?.name}</h3>
+        <p>{topic?.category}</p>
         <p>{topic?.description}</p>
-
         {topic.link ? (
           <div>
-            <a href={topic?.link}>
+            <a href={topic?.link} target="_blank">
               <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
                 Link
               </button>
+              <div className="bg-gray-200 text-black font-bold px-2 rounded w-10 m-auto mt-2 mb-2" onClick={unFavorite}>
+                <FontAwesomeIcon icon={faTrash} className=""/>
+              </div>
             </a>
           </div>
         ) : (

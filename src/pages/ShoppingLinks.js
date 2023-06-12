@@ -1,33 +1,36 @@
 /** @format */
 
 import React from "react";
-//import Card from "../compenents/CategoryCard";
-import { homeLinks, homeTopics } from "../data/home";
+import { shoppingLinks, shoppingTopics } from "../data/shopping";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LinksPage } from "./LinksPage";
 import { LinkCard } from "../compenents/LinkCard";
 
 export const ShoppingLinks = () => {
-  const [pageTopics, setPageTopics] = useState([]);
+  const [pageTopics, setPageTopics] = useState(shoppingTopics);
   const [header, setHeader] = useState(null);
 
   const upDatePage = (e) => {
-    const selectedTopics = homeLinks.filter(
-      (topic) => topic.type === e.target.innerText
-    );
-    setHeader(e.target.innerText);
-    setPageTopics(selectedTopics);
+    if (!header) {
+      const selectedTopics = shoppingLinks.filter(
+        (topic) => topic.type === e.target.innerText
+      );
+      setHeader(e.target.innerText);
+      setPageTopics(shoppingLinks);
+    } else {
+      return;
+    }
   };
 
   const refreshTopics = () => {
-    setPageTopics([]);
+    setPageTopics(shoppingTopics);
     setHeader("");
   };
 
   return (
-    <div>
-      <header className="w-screen h-10px bg-slate-700 text-center p-2">
+    <div className="pb-2 grow-1 overflow-scroll min-h-[100vh]">
+      <header className="w-screen h-10px bg-black bg-opacity-60 text-center p-2">
         <h1 className="text-2xl rajdhani">SHOPPING</h1>
 
         {header ? (

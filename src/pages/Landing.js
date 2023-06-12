@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../veganCheatSheet.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faList } from "@fortawesome/free-solid-svg-icons";
 import IgLogo from '../instagram.svg'
 
 export const Landing = () => {
@@ -11,17 +12,21 @@ export const Landing = () => {
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
+        <h2 className="text-2xl bg-white font-bold ">
+          <FontAwesomeIcon icon={faLink}  className='mr-1'/>
+        440 links for vegan studies, movies, books, & more!
+        </h2>
       </header>
       <main>
         <Link to="/categories">
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
-            <h3 className="text-4xl">Categoires</h3>
-            <p className="text-lg">
-              440 links for vegan studies, movies, books, & more!
-            </p>
+            <h3 className="text-4xl">
+              <FontAwesomeIcon icon={faList} className='h-5 mb-1.5'/> Categoires
+              </h3>
+            <p className="text-lg"></p>
           </div>
         </Link>
-        <a href='https://www.veganhacktivists.org' target='_blank'>
+        <a href="https://www.veganhacktivists.org" target="_blank">
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
             <h3 className="text-4xl">Vegan hacktivists</h3>
             <p className="text-lg">
@@ -29,7 +34,7 @@ export const Landing = () => {
             </p>
           </div>
         </a>
-        <Link to='/donate'>
+        <Link to="/donate">
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
             <h3 className="text-4xl">Donate</h3>
             <p className="text-lg">
@@ -38,7 +43,7 @@ export const Landing = () => {
             </p>
           </div>
         </Link>
-        <Link>
+        <Link to='/submit'>
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4 flex justify-center">
             <FontAwesomeIcon
               icon={faLink}

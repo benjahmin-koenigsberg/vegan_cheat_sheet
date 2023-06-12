@@ -72,14 +72,14 @@ useEffect(()=>{
       </div>
       <div onClick={upDatePage}>
         {pageTopics.map((topic, index) => (
-          <FavoritesCard key={index} topic={topic} />
+          <FavoritesCard key={index} topic={topic} setPageTopics={setPageTopics} />
         ))}
       </div>
-      <button
+      {/* <button
         onClick={clearFavs}
         className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full justify-center m-auto w-fit mb-2">
         Clear Favorites
-      </button>
+      </button> */}
     </div>
   );
 };
