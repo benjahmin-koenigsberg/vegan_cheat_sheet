@@ -18,6 +18,8 @@ This Vegan Cheat Sheet is maintained by Vegan Hactivists
 
 # Live Site
 
+This is currently a work in progress. If links to not appear after clicking on sub categoires, go back and try again 
+
  ## https://vegan-cheat-sheet.vercel.app/
 
 ![Alt text](src/web_app_ss.png)
