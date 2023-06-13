@@ -97,7 +97,7 @@ export const SumbmitLink = () => {
                 Link URL
               </label>
               <input
-                placeholder='https://veganlink.org'
+                placeholder="https://veganlink.org"
                 required
                 type="url"
                 name="link"
@@ -107,7 +107,7 @@ export const SumbmitLink = () => {
               />
             </div>
             <a
-              href={`mailto:magnanimousplayer@gmail.com?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
+              href={`mailto:cheatsheet@veganhacktivists.org?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
                 "  CATEGORY :  " +
                 submission.category +
                 "  " +
