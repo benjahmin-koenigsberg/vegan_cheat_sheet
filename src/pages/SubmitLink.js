@@ -6,15 +6,16 @@ import logo from "../veganCheatSheet.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
+
+
 export const SumbmitLink = () => {
 
   const [submission, setSubmission] = useState({
-    category: '',
-    name: '',
-    description: '',
-    link: '',
+    category: "",
+    name: "",
+    description: "",
+    link: "",
   });
-
 
   function handleChange(evt) {
     evt.preventDefault()
@@ -25,13 +26,13 @@ export const SumbmitLink = () => {
 }
 
   return (
-    <div>
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
       </header>
       <main>
-        <div className="flex-col">
+        <div className="flex-col p-5">
           <form className="flex-col" action="magnanimousplayer@gmail.com">
             <div className="mb-6 p-3">
               <label
@@ -90,11 +91,25 @@ export const SumbmitLink = () => {
               />
             </div>
             <a
-              href={`mailto:magnanimousplayer@gmail.com?subject=Link%Submission%20for%20Vegan%20Cheat%20Sheet&body=${submission}`}
-              >
-              <button className="bg-gray-200 text-black font-bold p-2 rounded mb-5 cursor-pointer ml-3" >
+              href={`mailto:magnanimousplayer@gmail.com?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
+                "category :" +
+                submission.category +
+                " " +
+                "name :" +
+                submission.name +
+                " " +
+                "description :" +
+                submission.description +
+                " " +
+                "URL :" +
+                submission.link
+              }`}
+              //   href="mailto:cheatsheet@veganhacktivists.org"
+              className="bg-gray-200 text-black font-bold px-3 py-2 rounded  ml-3">
+              Submit Link
+              {/* <button className="bg-gray-200 text-black font-bold p-2 rounded mb-5 cursor-pointer ml-3">
                 Submit Link
-              </button>
+              </button> */}
             </a>
           </form>
         </div>

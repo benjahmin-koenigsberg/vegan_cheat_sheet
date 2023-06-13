@@ -2,13 +2,16 @@ import React from "react";
 //import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-
+import trash from '../trash.wav'
 
 function FavoritesCard({ topic, setPageTopics }) {
   console.log(topic.link)
 
+const audio = new Audio(trash);
+
 
 const unFavorite = () => {
+audio.play()
 localStorage.removeItem(topic.name)
 
   const getStorage = () => {
@@ -17,7 +20,7 @@ localStorage.removeItem(topic.name)
       let favObj = localStorage.getItem(localStorage.key(i));
       if (favObj !== "INFO") favArr.push(JSON.parse(favObj));
       setPageTopics(favArr);
-      document.location.reload();
+      window.location.reload();
     }
   };
 

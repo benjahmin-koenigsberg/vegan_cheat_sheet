@@ -29,7 +29,7 @@ export const MediaLinks = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-purple-400 text-center p-2">
         <h1 className="text-2xl rajdhani">MEDIA</h1>
 

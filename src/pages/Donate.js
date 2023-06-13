@@ -7,7 +7,7 @@ import IgLogo from "../instagram.svg";
 
 export const Donate = () => {
   return (
-    <div>
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
@@ -24,9 +24,9 @@ export const Donate = () => {
               Donate Now!
             </button>
           </a>
-          <br/>
-          <br/>
-          <h2 className=''>
+          <br />
+          <br />
+          <h2 className="">
             We’re a group of passionate Vegan Activists that volunteer our time
             and skills towards vegan projects worth supporting. Every project we
             build or volunteer for aims to help spread compassion through

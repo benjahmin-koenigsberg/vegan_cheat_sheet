@@ -8,26 +8,27 @@ import IgLogo from '../instagram.svg'
 
 export const Landing = () => {
   return (
-    <div>
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
         <h2 className="text-2xl bg-white font-bold ">
-          <FontAwesomeIcon icon={faLink}  className='mr-1'/>
-        440 links for vegan studies, movies, books, & more!
+          <FontAwesomeIcon icon={faLink} className="mr-1" />
+          440 links for vegan studies, movies, books, & more!
         </h2>
       </header>
       <main>
         <Link to="/categories">
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">
-              <FontAwesomeIcon icon={faList} className='h-5 mb-1.5'/> Categoires
-              </h3>
+              <FontAwesomeIcon icon={faList} className="h-5 mb-1.5" />{" "}
+              Categoires
+            </h3>
             <p className="text-lg"></p>
           </div>
         </Link>
         <a href="https://www.veganhacktivists.org" target="_blank">
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">Vegan hacktivists</h3>
             <p className="text-lg">
               🦆 This sheet is maintained by VeganHacktivists.org
@@ -35,7 +36,7 @@ export const Landing = () => {
           </div>
         </a>
         <Link to="/donate">
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">Donate</h3>
             <p className="text-lg">
               Please support this project and our others for saving animals and
@@ -43,8 +44,17 @@ export const Landing = () => {
             </p>
           </div>
         </Link>
-        <Link to='/submit'>
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-4 flex justify-center">
+        <a href="https://veganhacktivists.org/grants" target="_blank">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
+            <h3 className="text-4xl">Get Funding for your Activism!</h3>
+            <p className="text-lg">
+              Announcing up to $1000 USD in seed funding grants for outstanding
+              compassionate, and effective, animal rights activism! 🌱🐤💕
+            </p>
+          </div>
+        </a>
+        <Link to="/submit">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3 flex justify-center">
             <FontAwesomeIcon
               icon={faLink}
               className="my-auto mr-1 text-xl"></FontAwesomeIcon>

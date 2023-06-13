@@ -32,7 +32,7 @@ export const FashionLinks = () => {
   };
 
   return (
-    <div className="pb-2 grow-1 overflow-scroll min-h-[100vh]">
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-zinc-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FASHION</h1>
 

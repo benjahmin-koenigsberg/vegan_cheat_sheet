@@ -6,7 +6,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export const Categories = () => {
   return (
-    <div>
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
         <h1 className="text-3xl rajdhani">CATEGORIES</h1>
       </header>
@@ -95,8 +95,9 @@ export const Categories = () => {
         <Link to="/donate">
           <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
             <div className="flex justify-start">
-              <FontAwesomeIcon icon={faHeart} className='m-auto mr-2 text-red-500 text-2xl'>
-              </FontAwesomeIcon>
+              <FontAwesomeIcon
+                icon={faHeart}
+                className="m-auto mr-2 text-red-500 text-2xl"></FontAwesomeIcon>
               <h3 className="justify-center m-auto text-xl">DONATE</h3>
               <p className="text-sm"></p>
             </div>

@@ -29,7 +29,7 @@ export const BookLinks = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-blue-500 text-center p-2">
         <h1 className="text-2xl rajdhani">BOOKS</h1>
 
@@ -51,7 +51,7 @@ export const BookLinks = () => {
         <h1 className="">{header}</h1>
       </div>
       <div onClick={upDatePage}>
-        {pageTopics.map((topic, index) => (
+        {pageTopics?.map((topic, index) => (
           <LinkCard key={index} topic={topic} />
         ))}
       </div>

@@ -27,20 +27,20 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/home" element={<HomeLinks />} />
-          <Route path="/studies" element={<StudiesLinks />} />
-          <Route path="/forums" element={<ForumLinks />} />
-          <Route path="/books" element={<BookLinks />} />
-          <Route path="/media" element={<MediaLinks />} />
-          <Route path="/fashion" element={<FashionLinks />} />
-          <Route path="/podcasts" element={<PodcastLinks />} />
-          <Route path="/shopping" element={<ShoppingLinks />} />
-          <Route path="/faq" element={<FaqLinks />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/submit" element={<SumbmitLink />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/home" element={<HomeLinks />} />
+            <Route path="/studies" element={<StudiesLinks />} />
+            <Route path="/forums" element={<ForumLinks />} />
+            <Route path="/books" element={<BookLinks />} />
+            <Route path="/media" element={<MediaLinks />} />
+            <Route path="/fashion" element={<FashionLinks />} />
+            <Route path="/podcasts" element={<PodcastLinks />} />
+            <Route path="/shopping" element={<ShoppingLinks />} />
+            <Route path="/faq" element={<FaqLinks />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/submit" element={<SumbmitLink />} />
         </Routes>
         <NavBar />
       </Router>
