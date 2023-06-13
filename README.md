@@ -4,7 +4,7 @@ This project is inspired by The Vegan Cheat Sheet
 
 ## https://vegancheatsheet.org/
 
-![Alt text](src/spreadsheet_ss.png)
+![Alt text](<src/Screen Shot 2023-06-13 at 11.23.38 AM.png>)
 
 ### A collection of over 400 links to various vegan topics, scientific studies, movies, books, activists resources and more!
 
@@ -18,7 +18,7 @@ This Vegan Cheat Sheet is maintained by Vegan Hactivists
 
 # Live Site
 
-This is currently a work in progress. If links to not appear after clicking on sub categoires, go back and try again 
+This is currently a work in progress. If links to not appear after clicking on sub categoires, go back and try again
 
  ## https://vegan-cheat-sheet.vercel.app/
 

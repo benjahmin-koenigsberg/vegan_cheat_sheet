@@ -108,7 +108,7 @@ export const SumbmitLink = () => {
             </div>
             <a
               href={`mailto:cheatsheet@veganhacktivists.org?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
-                "  CATEGORY :  " +
+                "CATEGORY :  " +
                 submission.category +
                 "  " +
                 "  NAME :  " +
