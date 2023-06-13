@@ -11,8 +11,8 @@ export const Landing = () => {
     <div className="min-h-[92vh] flex-col">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
-        <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
-        <h2 className="text-2xl bg-white font-bold ">
+        <h1 className="text-3xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
+        <h2 className="text-xl bg-white font-bold ">
           <FontAwesomeIcon icon={faLink} className="mr-1" />
           440 links for vegan studies, movies, books, & more!
         </h2>

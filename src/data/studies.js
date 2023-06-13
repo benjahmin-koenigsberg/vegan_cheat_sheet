@@ -19,7 +19,7 @@ export const studyTopics = [
   },
   {
     type: "Veganism & General Studies",
-    name: "",
+    name: "Veganism & General Studies",
     description: "",
     category: "",
   },
