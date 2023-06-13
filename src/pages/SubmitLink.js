@@ -40,13 +40,25 @@ export const SumbmitLink = () => {
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Category
               </label>
-              <input
-                type="text"
+              <select
+                required
                 name="category"
                 value={submission.category}
                 onChange={handleChange}
-                className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              />
+                className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="" disabled selected hidden>
+                  Choose a category
+                </option>
+                <option value="activism">Activism</option>
+                <option value="studies">Studies</option>
+                <option value="forums">Forums</option>
+                <option value="books">Books</option>
+                <option value="media">Media</option>
+                <option value="fashion">Fashion</option>
+                <option value="podcasts">Podcasts</option>
+                <option value="shopping">Shopping</option>
+                <option value="other">Other</option>
+              </select>
             </div>
             <div className="mb-6 p-3">
               <label
@@ -55,6 +67,7 @@ export const SumbmitLink = () => {
                 Name
               </label>
               <input
+                required
                 type="text"
                 name="name"
                 value={submission.name}
@@ -69,6 +82,7 @@ export const SumbmitLink = () => {
                 Description
               </label>
               <input
+                required
                 type="textarea"
                 name="description"
                 value={submission.description}
@@ -83,7 +97,9 @@ export const SumbmitLink = () => {
                 Link URL
               </label>
               <input
-                type="text"
+                placeholder='https://veganlink.org'
+                required
+                type="url"
                 name="link"
                 value={submission.link}
                 onChange={handleChange}
@@ -92,16 +108,16 @@ export const SumbmitLink = () => {
             </div>
             <a
               href={`mailto:magnanimousplayer@gmail.com?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
-                "category :" +
+                "  CATEGORY :  " +
                 submission.category +
-                " " +
-                "name :" +
+                "  " +
+                "  NAME :  " +
                 submission.name +
-                " " +
-                "description :" +
+                "  " +
+                "  DESCRIPTION :   " +
                 submission.description +
-                " " +
-                "URL :" +
+                "  " +
+                "  URL :   " +
                 submission.link
               }`}
               //   href="mailto:cheatsheet@veganhacktivists.org"
