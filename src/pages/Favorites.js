@@ -49,7 +49,7 @@ useEffect(()=>{
   };
 
   return (
-    <div className="min-h-[92vh] flex-col">
+    <div className='min-h-[92vh] flex-col'>
       <header className="w-screen h-10px bg-red-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FAVORITES</h1>
         {header ? (
@@ -70,17 +70,11 @@ useEffect(()=>{
       <div className="flex-col text-2xl text-center p-1 bg-slate-200">
         <h1 className="">{header}</h1>
       </div>
-      { pageTopics.length === 0 ? <h2 className="justify-center text-center mt-4 text-xl" >No Favorites</h2> :
       <div onClick={upDatePage}>
-        {pageTopics?.map((topic, index) => (
-          <FavoritesCard
-            key={index}
-            topic={topic}
-            setPageTopics={setPageTopics}
-          />
+        {pageTopics.map((topic, index) => (
+          <FavoritesCard key={index} topic={topic} setPageTopics={setPageTopics} />
         ))}
       </div>
-      }
       {/* <button
         onClick={clearFavs}
         className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full justify-center m-auto w-fit mb-2">
