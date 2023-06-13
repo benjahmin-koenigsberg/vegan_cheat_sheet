@@ -72,7 +72,7 @@ useEffect(()=>{
       </div>
       { pageTopics.length === 0 ? <h2 className="justify-center text-center mt-4 text-xl" >No Favorites</h2> :
       <div onClick={upDatePage}>
-        {pageTopics.map((topic, index) => (
+        {pageTopics?.map((topic, index) => (
           <FavoritesCard
             key={index}
             topic={topic}
