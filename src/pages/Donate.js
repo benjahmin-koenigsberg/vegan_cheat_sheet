@@ -7,7 +7,7 @@ import IgLogo from "../instagram.svg";
 
 export const Donate = () => {
   return (
-    <div className="min-h-[92vh] flex-col overflow-scroll pb-10">
+    <div className="min-h-[92vh] flex-col overflow-scroll pb-16">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
