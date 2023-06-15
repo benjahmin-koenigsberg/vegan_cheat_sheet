@@ -51,8 +51,8 @@ export const Donate = () => {
           <br />
           <iframe
             src="https://www.youtube.com/embed/jaW8n1pd97U"
-            height="300"
-            width="400"
+            height="200"
+            width="300"
             title="Into video for Vegan Hacktivists"
             className="m-auto mb-5"></iframe>
           <a href="https://veganhacktivists.org/support">
