@@ -19,8 +19,8 @@ export const Donate = () => {
             💕
           </h1>
           <br />
-          <a href="https://veganhacktivists.org/support">
-            <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
+          <a href="https://veganhacktivists.org/support" target="_blank">
+            <button className="bg-gray-200 text-black font-bold px-2 rounded m-1 cursor-pointer">
               Donate Now!
             </button>
           </a>
@@ -33,6 +33,14 @@ export const Donate = () => {
             Veganism by supporting both vegans, non-vegans and activists in some
             shape, way, or form.
           </h2>
+          <br />
+          <iframe
+            src="https://www.youtube.com/embed/jaW8n1pd97U"
+            height="200"
+            width="325"
+            title="Into video for Vegan Hacktivists"
+            className="m-auto mb-5"
+          />
           <br />
 
           <h2>
@@ -49,14 +57,8 @@ export const Donate = () => {
             and the animals to have your support. 🐮
           </h2>
           <br />
-          <iframe
-            src="https://www.youtube.com/embed/jaW8n1pd97U"
-            height="200"
-            width="300"
-            title="Into video for Vegan Hacktivists"
-            className="m-auto mb-5"></iframe>
-          <a href="https://veganhacktivists.org/support">
-            <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
+          <a href="https://veganhacktivists.org/support" target="_blank">
+            <button className="bg-gray-200 text-black font-bold px-2 rounded m-1 cursor-pointer mb-5">
               Donate Now!
             </button>
           </a>
