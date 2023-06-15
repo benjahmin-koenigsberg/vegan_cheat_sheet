@@ -27,7 +27,7 @@ export const ForumLinks = () => {
   };
 
   return (
-    <div className="min-h-[92vh] flex-col">
+    <div className="min-h-[92vh] flex-col pb-10">
       <header className="w-screen h-10px bg-red-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FORUMS</h1>
 

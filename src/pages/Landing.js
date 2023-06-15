@@ -8,7 +8,7 @@ import IgLogo from '../instagram.svg'
 
 export const Landing = () => {
   return (
-    <div className="min-h-[92vh] flex-col">
+    <div className="min-h-[92vh] flex-col pb-10">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-3xl rajdhani bg-white">The Vegan Cheat Sheet</h1>

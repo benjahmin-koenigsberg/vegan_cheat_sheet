@@ -7,7 +7,7 @@ import IgLogo from "../instagram.svg";
 
 export const Donate = () => {
   return (
-    <div className="min-h-[92vh] flex-col">
+    <div className="min-h-[92vh] flex-col overflow-scroll pb-10">
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-2xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
@@ -49,6 +49,12 @@ export const Donate = () => {
             and the animals to have your support. 🐮
           </h2>
           <br />
+          <iframe
+            src="https://www.youtube.com/embed/jaW8n1pd97U"
+            height="300"
+            width="400"
+            title="Into video for Vegan Hacktivists"
+            className="m-auto mb-5"></iframe>
           <a href="https://veganhacktivists.org/support">
             <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
               Donate Now!
