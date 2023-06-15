@@ -1,32 +1,30 @@
+/** @format */
+
 import React from "react";
 //import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import trash from '../trash.wav'
+import trash from "../trash.wav";
 
 function FavoritesCard({ topic, setPageTopics }) {
-  console.log(topic.link)
 
-const audio = new Audio(trash);
+  const audio = new Audio(trash);
 
+  const unFavorite = () => {
+    audio.play();
+    localStorage.removeItem(topic.name);
+    const getStorage = () => {
+      let favArr = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        let favObj = localStorage.getItem(localStorage.key(i));
+        if (favObj !== "INFO") favArr.push(JSON.parse(favObj));
+        setPageTopics(favArr);
+        window.location.reload();
+      }
+    };
 
-const unFavorite = () => {
-audio.play()
-localStorage.removeItem(topic.name)
-
-  const getStorage = () => {
-    let favArr = [];
-    for (let i = 0; i < localStorage.length; i++) {
-      let favObj = localStorage.getItem(localStorage.key(i));
-      if (favObj !== "INFO") favArr.push(JSON.parse(favObj));
-      setPageTopics(favArr);
-      window.location.reload();
-    }
+    getStorage();
   };
-
-  getStorage();
-}
-
 
   return (
     <>
@@ -41,10 +39,12 @@ localStorage.removeItem(topic.name)
               <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
                 Link
               </button>
-              <div className="bg-gray-200 text-black font-bold px-2 rounded w-10 m-auto mt-2 mb-2" onClick={unFavorite}>
-                <FontAwesomeIcon icon={faTrash} className=""/>
-              </div>
             </a>
+            <div
+              className="bg-gray-200 text-black font-bold px-2 rounded w-10 m-auto mt-2 mb-2"
+              onClick={unFavorite}>
+              <FontAwesomeIcon icon={faTrash} className="" />
+            </div>
           </div>
         ) : (
           ""
