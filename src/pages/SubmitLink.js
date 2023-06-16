@@ -44,7 +44,7 @@ return (obj.link.includes('www.') || obj.link.includes('http'))
       <main>
         <div className="flex-col p-5">
           <form className="flex-col" action="magnanimousplayer@gmail.com">
-            <div className="mb-6 p-3">
+            <div className="mb-2 p-3">
               <label
                 for="category"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -70,7 +70,7 @@ return (obj.link.includes('www.') || obj.link.includes('http'))
                 <option value="other">Other</option>
               </select>
             </div>
-            <div className="mb-6 p-3">
+            <div className="mb-2 p-3">
               <label
                 for="name"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -85,7 +85,7 @@ return (obj.link.includes('www.') || obj.link.includes('http'))
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
-            <div className="mb-6 p-3">
+            <div className="mb-2 p-3">
               <label
                 for="description"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -100,7 +100,7 @@ return (obj.link.includes('www.') || obj.link.includes('http'))
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
-            <div className="mb-6 p-3">
+            <div className="mb-3 p-3">
               <label
                 for="link"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -113,34 +113,35 @@ return (obj.link.includes('www.') || obj.link.includes('http'))
                 name="link"
                 value={submission.link}
                 onChange={handleChange}
-                className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="mb-6  block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
-              <a className="bg-gray-200 text-black font-bold px-3 py-2 rounded  ml-3"
-              href={`mailto:cheatsheet@veganhacktivists.org?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
-                "CATEGORY :  " +
-                submission.category +
-                "  " +
-                "  NAME :  " +
-                submission.name +
-                "  " +
-                "  DESCRIPTION :   " +
-                submission.description +
-                "  " +
-                "  URL :   " +
-                submission.link
-              }`}
-              >
-              Submit Link
-            </a>
-              {/* <button
+          </form>
+          <a
+            className="bg-gray-200 text-black font-bold px-3 py-2 rounded  ml-3 cursor-pointer"
+            href={`mailto:cheatsheet@veganhacktivists.org?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
+              "CATEGORY :  " +
+              submission.category +
+              "  " +
+              "  NAME :  " +
+              submission.name +
+              "  " +
+              "  DESCRIPTION :   " +
+              submission.description +
+              "  " +
+              "  URL :   " +
+              submission.link
+            }`}>
+            <button>Submit Link</button>
+          </a>
+          {/* <button
                 onClick={isValid}
                 className="bg-gray-200 text-black font-bold p-2 rounded mb-5 cursor-pointer ml-3">
                 Submit Link
               </button> */}
-          </form>
         </div>
       </main>
+      <div className="mt-10 h-30px"></div>
     </div>
   );
 };

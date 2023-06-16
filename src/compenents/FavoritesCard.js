@@ -15,7 +15,7 @@ function FavoritesCard({ topic, setPageTopics }) {
     localStorage.removeItem(topic.name);
     const getStorage = () => {
       let favArr = [];
-      for (let i = 0; i < localStorage.length; i++) {
+      for (let i = 0; i <= localStorage.length; i++) {
         let favObj = localStorage.getItem(localStorage.key(i));
         if (favObj !== "INFO") favArr.push(JSON.parse(favObj));
         setPageTopics(favArr);

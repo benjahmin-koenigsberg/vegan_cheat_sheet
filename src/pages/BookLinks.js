@@ -55,6 +55,7 @@ export const BookLinks = () => {
           <LinkCard key={index} topic={topic} />
         ))}
       </div>
+      <div className="mt-10"></div>
     </div>
   );
 };

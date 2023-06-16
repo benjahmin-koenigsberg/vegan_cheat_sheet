@@ -1,8 +1,9 @@
 import { useState } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 //import SearchBar from '../compenents/SearchBar'
 import { homeLinks } from "../data/home";
 import { faqTopics } from "../data/faq";
@@ -52,18 +53,24 @@ if (
 }
 
   return (
-
-    <div className="min-h-[92vh] flex-col">
+    <div className="min-h-[92vh] flex-col overflow-scroll">
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
         <h1 className="text-3xl rajdhani">CATEGORIES</h1>
       </header>
-      <div className="m-3">
+      <div className="m-3 ">
         <div className="relative mb-4 flex w-full flex-wrap items-stretch ">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white text-sm  font-bold py-3 px-4 rounded-l my-auto"
+            onClick={() => {
+              setIsSearching(false);
+            }}>
+            <FontAwesomeIcon icon={faArrowLeft} className="text-lg"/>
+          </button>
           <input
             onChange={handleInput}
             type="text"
             name="search"
-            className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l-xl border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+            className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto  border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon1"
@@ -80,18 +87,19 @@ if (
         </div>
       </div>
       <main>
-        { (isSearching ) ?
-        (
-         <div>
-            { allLinks.map((topic, index) => (
+        {isSearching ? (
+          <div>
+            {allLinks.map((topic, index) => (
               <LinkCard key={index} topic={topic} />
             ))}
           </div>
-        ) :
-        <CategoryCards/>
-        }
-
+        ) : (
+          <>
+            <CategoryCards />
+          </>
+        )}
       </main>
+      <div className="mt-16"></div>
     </div>
   );
 };

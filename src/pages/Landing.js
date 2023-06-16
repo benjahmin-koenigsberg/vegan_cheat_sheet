@@ -71,6 +71,7 @@ export const Landing = () => {
           </div>
         </Link>
       </main>
+      <div className="mt-5"></div>
     </div>
   );
 }

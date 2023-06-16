@@ -49,7 +49,7 @@ useEffect(()=>{
   };
 
   return (
-    <div className='min-h-[92vh] flex-col pb-10'>
+    <div className="min-h-[92vh] flex-col pb-10">
       <header className="w-screen h-10px bg-red-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FAVORITES</h1>
         {header ? (
@@ -72,7 +72,11 @@ useEffect(()=>{
       </div>
       <div onClick={upDatePage}>
         {pageTopics.map((topic, index) => (
-          <FavoritesCard key={index} topic={topic} setPageTopics={setPageTopics} />
+          <FavoritesCard
+            key={index}
+            topic={topic}
+            setPageTopics={setPageTopics}
+          />
         ))}
       </div>
       {/* <button
@@ -80,6 +84,7 @@ useEffect(()=>{
         className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full justify-center m-auto w-fit mb-2">
         Clear Favorites
       </button> */}
+      <div className="mt-10"></div>
     </div>
   );
 };

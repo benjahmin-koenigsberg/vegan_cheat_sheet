@@ -168,7 +168,7 @@ export const FaqLinks = () => {
         </div>
       </div>
 
-      <div className="w-50 h-contain border p-2 m-2 mt-3 shadow-lg text-center py-3 flex justify-center">
+      <div className="w-50 h-contain border p-2 m-2 mt-10 shadow-lg text-center py-3 flex justify-center">
         <div className="flex justify-start flex-col">
           <h3 className="justify-center m-auto text-lg"></h3>
           <p className="text-md"></p>
