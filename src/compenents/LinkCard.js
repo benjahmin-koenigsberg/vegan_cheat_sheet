@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from "uuid";
 import click from "../game-click.wav";
@@ -39,22 +40,27 @@ console.log()
         <h3 className="p-1">{topic.name}</h3>
         <p className="">{topic?.description}</p>
         <p className="">{topic?.category}</p>
-        <p className="">{topic.autor? 'By' : ''} {topic?.author}</p>
+        <p className="">
+          {topic.autor ? "By" : ""} {topic?.author}
+        </p>
 
         {topic.link ? (
-          <div>
-            <a href={topic?.link} target='_blank'>
-              <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
-                Link
+          <div className="flex justify-between px-2 pb-2">
+            <a href={topic?.link} target="_blank">
+              <button className="bg-gray-200 text-black font-bold px-8 rounded m-1">
+                <FontAwesomeIcon icon={faLink} />
               </button>
             </a>
             <div>
-            <button
-              className="bg-gray-200 text-black font-bold px-2 rounded m-1"
-              onClick={addToFavorites}>
-              <FontAwesomeIcon icon={faHeart} className="text-red-500 mr-2" />
-              {!isFavorite ? "Add to Favorites" : "Added to Favorites"}
-            </button>
+              <button
+                className="bg-gray-200 text-black font-bold px-2 rounded m-1"
+                onClick={addToFavorites}>
+                { !isFavorite ? (
+                  <FontAwesomeIcon icon={faHeart} />
+                ) : (
+                  <FontAwesomeIcon icon={faHeart} className="text-red-500" />
+                )}
+              </button>
             </div>
           </div>
         ) : (

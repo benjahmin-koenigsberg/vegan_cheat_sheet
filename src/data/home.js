@@ -222,7 +222,8 @@ export const homeLinks = [
     name: "⭐️ Dominion (2018)",
     category: "Animals",
     author: "",
-    description: "",
+    description:
+      "Dominion uses drones, hidden and handheld cameras to expose the dark underbelly of modern animal agriculture, questioning the morality and validity of humankind's dominion over the animal kingdom. While mainly focusing on animals used for food, it also explores other ways animals are exploited and abused by humans, including clothing, entertainment and research",
     link: "https://www.youtube.com/watch?v=ny6aqdFy9SI",
     "": "",
   },

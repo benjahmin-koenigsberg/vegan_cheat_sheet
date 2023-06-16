@@ -4,6 +4,7 @@ import React from "react";
 //import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import trash from "../trash.wav";
 
 function FavoritesCard({ topic, setPageTopics }) {
@@ -36,8 +37,8 @@ function FavoritesCard({ topic, setPageTopics }) {
         {topic.link ? (
           <div>
             <a href={topic?.link} target="_blank">
-              <button className="bg-gray-200 text-black font-bold px-2 rounded m-1">
-                Link
+              <button className="bg-gray-200 text-black font-bold px-8 rounded m-1">
+                <FontAwesomeIcon icon={faLink} />
               </button>
             </a>
             <div
