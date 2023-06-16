@@ -1,5 +1,3 @@
-/** @format */
-
 import React from "react";
 import { homeLinks, homeTopics } from "../data/home";
 import { useState } from "react";
