@@ -55,7 +55,7 @@ if (
   return (
     <div className="min-h-[92vh] flex-col overflow-scroll">
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
-        <h1 className="text-3xl rajdhani">CATEGORIES</h1>
+        <h1 className="text-3xl rajdhani">{ !isSearching ? `CATEGORIES` : `SEARCH`}</h1>
       </header>
       <div className="m-3 ">
         <div className="relative mb-4 flex w-full flex-wrap items-stretch ">
