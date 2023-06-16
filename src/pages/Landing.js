@@ -12,19 +12,18 @@ export const Landing = () => {
       <header className="w-screen h-10px bg-indigo-950 text-center p-2">
         <img className="m-auto h-35" src={logo} />
         <h1 className="text-3xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
-        <h2 className="text-xl bg-white font-bold ">
-          <FontAwesomeIcon icon={faLink} className="mr-1" />
-          440 links for vegan studies, movies, books, & more!
-        </h2>
       </header>
       <main>
         <Link to="/categories">
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3 categories">
             <h3 className="text-4xl">
               <FontAwesomeIcon icon={faList} className="h-5 mb-1.5" />{" "}
               Categoires
             </h3>
-            <p className="text-lg"></p>
+            <h2 className="text-xl font-bold ">
+              <FontAwesomeIcon icon={faLink} className="mr-1" />
+              440 links for vegan studies, movies, books, & more!
+            </h2>
           </div>
         </Link>
         <a href="https://www.veganhacktivists.org" target="_blank">
