@@ -51,7 +51,7 @@ export const ShoppingLinks = () => {
         <h1 className="">{header}</h1>
       </div>
       <div onClick={upDatePage}>
-        {pageTopics.map((topic, index) => (
+        {pageTopics?.map((topic, index) => (
           <LinkCard key={index} topic={topic} />
         ))}
       </div>

@@ -8,7 +8,6 @@ export const LinkCard = ({ topic }) => {
 
 const audio = new Audio(click);
 
-
 const [isFavorite, setIsFavorite] = useState(false)
 const id = uuidv4()
 const addToFavorites = () => {
