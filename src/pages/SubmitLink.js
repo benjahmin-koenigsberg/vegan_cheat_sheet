@@ -5,10 +5,16 @@ import {useState} from "react";
 import logo from "../veganCheatSheet.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
 export const SumbmitLink = () => {
+
+
+  const navigate = useNavigate();
 
   const [submission, setSubmission] = useState({
     category: "",
@@ -23,6 +29,10 @@ export const SumbmitLink = () => {
   setSubmission({
    ...submission, [evt.target.name]: value
   });
+}
+
+const isValid = (obj) => {
+return (obj.link.includes('www.') || obj.link.includes('http'))
 }
 
   return (
@@ -106,7 +116,7 @@ export const SumbmitLink = () => {
                 className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
-            <a
+              <a className="bg-gray-200 text-black font-bold px-3 py-2 rounded  ml-3"
               href={`mailto:cheatsheet@veganhacktivists.org?subject=Link%20Submission%20for%20Vegan%20Cheat%20Sheet&body=${
                 "CATEGORY :  " +
                 submission.category +
@@ -120,13 +130,14 @@ export const SumbmitLink = () => {
                 "  URL :   " +
                 submission.link
               }`}
-              //   href="mailto:cheatsheet@veganhacktivists.org"
-              className="bg-gray-200 text-black font-bold px-3 py-2 rounded  ml-3">
+              >
               Submit Link
-              {/* <button className="bg-gray-200 text-black font-bold p-2 rounded mb-5 cursor-pointer ml-3">
+            </a>
+              {/* <button
+                onClick={isValid}
+                className="bg-gray-200 text-black font-bold p-2 rounded mb-5 cursor-pointer ml-3">
                 Submit Link
               </button> */}
-            </a>
           </form>
         </div>
       </main>

@@ -11,21 +11,21 @@ import cow from '../cow.gif'
 const NavBar = () => {
   return (
     <>
-      <footer className=" fixed-footer">
+      <footer className="fixed-footer">
         <div className='cow-container'>
           <img
             className="h-10 cow"
             src={cow}
           />
         </div>
-        <div className="w-screen  bg-slate-300 p-4 h-fit z-100 ">
+        <div className="w-screen  bg-slate-300 p-1 pt-2  z-100 ">
           <ul className="flex justify-around">
             <Link to="/">
               <div className="flex-col">
                 <li>
                   <FontAwesomeIcon
                     icon={faHome}
-                    className=" text-xl"></FontAwesomeIcon>
+                    className=" text-3xl"></FontAwesomeIcon>
                 </li>
               </div>
             </Link>
@@ -34,7 +34,7 @@ const NavBar = () => {
                 <li>
                   <FontAwesomeIcon
                     icon={faList}
-                    className="text-2xl"></FontAwesomeIcon>
+                    className="text-4xl"></FontAwesomeIcon>
                 </li>
               </div>
             </Link>
@@ -52,7 +52,7 @@ const NavBar = () => {
                 <li>
                   <FontAwesomeIcon
                     icon={faHeart}
-                    className=" text-red-500 text-2xl"></FontAwesomeIcon>
+                    className=" text-red-500 text-4xl"></FontAwesomeIcon>
                 </li>
               </div>
             </Link>

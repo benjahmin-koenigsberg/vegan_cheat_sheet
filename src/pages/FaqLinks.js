@@ -14,7 +14,7 @@ export const FaqLinks = () => {
       // const selectedTopics = shoppingLinks.filter(
       //   (topic) => topic.type === e.target.innerText
       // );
-      setHeader(e.target.innerText);
+     // setHeader(e.target.innerText);
       setPageTopics(faqTopics);
     } else {
       return;
@@ -27,7 +27,7 @@ export const FaqLinks = () => {
   };
 
   return (
-    <div className="min-h-[92vh] flex-col">
+    <div className="min-h-[92vh] flex-col ">
       <header className="w-screen h-10px bg-yellow-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FAQ</h1>
 
