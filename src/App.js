@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom'
 import { Landing } from "./pages/Landing";
 import { Categories } from "./pages/Categories";
-import { CategoriesCopy } from "./pages/CategoriesCopy";
+import { Search } from "./pages/Search";
 import { HomeLinks } from "./pages/HomeLinks";
 import { StudiesLinks } from "./pages/StudiesLinks"
 import { ForumLinks } from "./pages/ForumLinks";

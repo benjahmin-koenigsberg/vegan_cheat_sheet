@@ -15,7 +15,7 @@ import { fashionLinks } from "../data/fashion";
 import { LinkCard } from "../compenents/LinkCard";
 
 
-export const CategoriesCopy = () => {
+export const Search = () => {
 
 const allLinksArray = [ ...homeLinks, ...fashionLinks, ...studyLinks, ...mediaLinks, ...shoppingLinks, ...podcastLinks, ...forumLinks, ...faqTopics ]
 
@@ -28,7 +28,9 @@ const filtered = allLinksArray.filter((item) => {
   return (
     item.name.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
     item.category.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
-    item.description.toLowerCase().includes(`${e.target.value.toLowerCase()}`)
+    item.description.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
+    item.type.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
+
   );
 });
   setAllLinks(filtered)
