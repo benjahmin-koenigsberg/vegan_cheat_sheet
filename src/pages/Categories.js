@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { CategoryCards } from '../compenents/CategoryCards';
 
 
 export const Categories = () => {
@@ -10,7 +11,8 @@ export const Categories = () => {
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
         <h1 className="text-3xl rajdhani">CATEGORIES</h1>
       </header>
-      <main>
+      <CategoryCards/>
+      {/* <main>
         <Link to="/home">
           <div className="w-50 h-contain border p-1 m-2 shadow-lg cursor-pointer text-center py-3 flex justify-center">
             <div className="flex justify-start">
@@ -103,7 +105,7 @@ export const Categories = () => {
             </div>
           </div>
         </Link>
-      </main>
+      </main> */}
     </div>
   );
 }

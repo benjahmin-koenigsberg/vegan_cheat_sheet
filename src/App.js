@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path="/search" element={<CategoriesCopy />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/home" element={<HomeLinks />} />
           <Route path="/studies" element={<StudiesLinks />} />
           <Route path="/forums" element={<ForumLinks />} />

@@ -14,7 +14,7 @@ export const Landing = () => {
         <h1 className="text-3xl rajdhani bg-white">The Vegan Cheat Sheet</h1>
       </header>
       <main>
-        <Link to="/categories">
+        <Link to="/search">
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3 categories border-black border-dashed">
             <h3 className="text-4xl">
               <FontAwesomeIcon icon={faList} className="h-5 mb-1.5" />{" "}

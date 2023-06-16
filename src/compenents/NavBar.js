@@ -29,7 +29,7 @@ const NavBar = () => {
                 </li>
               </div>
             </Link>
-            <Link to="/categories">
+            <Link to="/search">
               <div className="flex-col">
                 <li>
                   <FontAwesomeIcon
