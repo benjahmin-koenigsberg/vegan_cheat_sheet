@@ -63,10 +63,12 @@ if (
             className="bg-blue-500 hover:bg-blue-700 text-white text-sm  font-bold py-3 px-4 rounded-l my-auto"
             onClick={() => {
               setIsSearching(false);
+              document.getElementById('input').value=''
             }}>
-            <FontAwesomeIcon icon={faArrowLeft} className="text-lg"/>
+            <FontAwesomeIcon icon={faArrowLeft} className="text-lg" />
           </button>
           <input
+            id='input'
             onChange={handleInput}
             type="text"
             name="search"
@@ -89,9 +91,13 @@ if (
       <main>
         {isSearching ? (
           <div>
-            {allLinks.map((topic, index) => (
-              <LinkCard key={index} topic={topic} />
-            ))}
+            {allLinks.length === 0 ? (
+              <h1 className="text-3xl rajdhani text-center">Sorry, no matches</h1>
+            ) : (
+              allLinks.map((topic, index) => (
+                <LinkCard key={index} topic={topic} />
+              ))
+            )}
           </div>
         ) : (
           <>

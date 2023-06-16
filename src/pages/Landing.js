@@ -38,7 +38,7 @@ export const Landing = () => {
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">Donate</h3>
             <p className="text-lg">
-              Please support this project and our others for saving animals and
+              Please support our projects for saving animals and
               supporting new vegans!
             </p>
           </div>
