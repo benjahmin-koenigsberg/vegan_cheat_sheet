@@ -25,13 +25,11 @@ const [allLinks, setAllLinks] = useState([])
 
 const updateSearch = (e) => {
 const filtered = allLinksArray.filter((item) => {
-  return (
+  return
     item.name.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
     item.category.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
     item.description.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
-    item.type.toLowerCase().includes(`${e.target.value.toLowerCase()}`) ||
-
-  );
+    item.type.toLowerCase().includes(`${e.target.value.toLowerCase()}`)
 });
   setAllLinks(filtered)
 }
