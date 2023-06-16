@@ -47,8 +47,7 @@ export const Landing = () => {
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">Get Funding for your Activism!</h3>
             <p className="text-lg">
-              Announcing up to $1000 USD in seed funding grants for outstanding
-              compassionate, and effective, animal rights activism! 🌱🐤💕
+             Up to $1000 USD in grants for animal rights activism! 🌱🐤💕
             </p>
           </div>
         </a>
