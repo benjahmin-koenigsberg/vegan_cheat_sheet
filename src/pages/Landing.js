@@ -15,7 +15,7 @@ export const Landing = () => {
       </header>
       <main>
         <Link to="/categories">
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3 categories">
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3 categories border-black border-dashed">
             <h3 className="text-4xl">
               <FontAwesomeIcon icon={faList} className="h-5 mb-1.5" />{" "}
               Categoires
