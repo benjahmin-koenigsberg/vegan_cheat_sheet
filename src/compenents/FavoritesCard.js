@@ -7,10 +7,9 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import trash from "../trash.wav";
 
-function FavoritesCard({ topic, setPageTopics }) {
+function FavoritesCard({ topic, setPageTopics, pageTopics }) {
 
 const [readMore, setReadMore] = useState(false)
-
 
 
   const audio = new Audio(trash);
@@ -25,12 +24,11 @@ const [readMore, setReadMore] = useState(false)
         let favObj = localStorage.getItem(localStorage.key(i));
         if (favObj !== "INFO") favArr.push(JSON.parse(favObj));
         setPageTopics(favArr);
-        window.location.reload();
+       document.location.reload();
       }
     };
     getStorage();
   };
-
 
   return (
     // <>

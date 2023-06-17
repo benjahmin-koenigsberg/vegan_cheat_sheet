@@ -52,19 +52,26 @@ useEffect(()=>{
     <div className="min-h-[92vh] flex-col pb-10">
       <header className="w-screen h-10px bg-red-500 text-center p-2">
         <h1 className="text-2xl rajdhani">FAVORITES</h1>
-        {header ? (
-          <button
-            onClick={refreshTopics}
-            className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full">
-            Back
-          </button>
-        ) : (
-          <Link to="/search">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full">
+        <div className=" flex flex-col justify-center">
+          {header ? (
+            <button
+              onClick={refreshTopics}
+              className="bg-blue-500 mb-2 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full">
               Back
             </button>
-          </Link>
-        )}
+          ) : (
+            <Link to="/search">
+              <button className="bg-blue-500 mb-2 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full">
+                Back
+              </button>
+            </Link>
+          )}
+          <button
+          onClick={clearFavs}
+          className="bg-slate-500 w-32 m-auto hover:bg-blue-700 text-white text-sm font-bold py-1  rounded-full">
+          Clear All
+          </button>
+        </div>
       </header>
 
       <div className="flex-col text-2xl text-center p-1 bg-slate-200">
@@ -78,6 +85,7 @@ useEffect(()=>{
             key={index}
             topic={topic}
             setPageTopics={setPageTopics}
+            pageTopics={pageTopics}
           />
         ))}
       </div>

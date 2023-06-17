@@ -15,6 +15,7 @@ const [ readMore, setReadMore ] = useState(false)
 
 const addToFavorites = () => {
 
+if(!topic.description) topic.description = '  ';
 
 const favObj = {
   name: topic.name,
@@ -45,7 +46,7 @@ else {
             <p>{topic.description}</p>
           ) : (
             <div>
-              <p id="description">{topic.description.slice(0, 100)}</p>
+              <p id="description" className='px-4'>{topic.description.slice(0, 100)}</p>
               <button
                 className="text-indigo-950 cursor-pointer rajdhani"
                 onClick={() => {
