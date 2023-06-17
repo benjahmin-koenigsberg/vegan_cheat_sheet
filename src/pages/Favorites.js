@@ -34,7 +34,7 @@ useEffect(()=>{
     const selectedTopics = homeLinks.filter(
       (topic) => topic.type === e.target.innerText
     );
-    setHeader(e.target.innerText);
+    //setHeader(e.target.innerText);
     setPageTopics(selectedTopics);
   };
 
@@ -70,7 +70,9 @@ useEffect(()=>{
       <div className="flex-col text-2xl text-center p-1 bg-slate-200">
         <h1 className="">{header}</h1>
       </div>
-      <div onClick={upDatePage}>
+      <div
+      //onClick={upDatePage}
+      >
         {pageTopics.map((topic, index) => (
           <FavoritesCard
             key={index}

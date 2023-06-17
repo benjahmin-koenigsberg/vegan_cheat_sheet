@@ -55,20 +55,22 @@ if (
   return (
     <div className="min-h-[92vh] flex-col overflow-scroll">
       <header className="w-screen h-10px bg-slate-500 text-center p-2">
-        <h1 className="text-3xl rajdhani">{ !isSearching ? `CATEGORIES` : `SEARCH`}</h1>
+        <h1 className="text-3xl rajdhani">
+          {!isSearching ? `CATEGORIES` : `SEARCH`}
+        </h1>
       </header>
       <div className="m-3 ">
         <div className="relative mb-4 flex w-full flex-wrap items-stretch ">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white text-sm  font-bold py-3 px-4 rounded-l my-auto"
+            className="bg-blue-500 shadow-xl hover:bg-blue-700 text-white text-sm  font-bold py-3 px-4 rounded-l my-auto"
             onClick={() => {
               setIsSearching(false);
-              document.getElementById('input').value=''
+              document.getElementById("input").value = "";
             }}>
             <FontAwesomeIcon icon={faArrowLeft} className="text-lg" />
           </button>
           <input
-            id='input'
+            id="input"
             onChange={handleInput}
             type="text"
             name="search"
@@ -79,7 +81,7 @@ if (
           />
           <button
             onClick={updateSearch}
-            className="relative z-[2] flex items-center rounded-r-xl bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+            className="relative z-[2] flex items-center rounded-r-xl bg-primary px-6 h-11  leading-tight shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
             type="button"
             id="button-addon1"
             data-te-ripple-init
@@ -92,7 +94,9 @@ if (
         {isSearching ? (
           <div>
             {allLinks.length === 0 ? (
-              <h1 className="text-3xl rajdhani text-center">Sorry, no matches</h1>
+              <h1 className="text-3xl rajdhani text-center">
+                Sorry, no matches
+              </h1>
             ) : (
               allLinks.map((topic, index) => (
                 <LinkCard key={index} topic={topic} />
