@@ -31,68 +31,6 @@ const [readMore, setReadMore] = useState(false)
   };
 
   return (
-    // <>
-    //   <div className="w-50 h-auto border p-1 m-2 shadow-lg cursor-pointer text-center">
-    //     <h3 className="p-1">{topic.name}</h3>
-    //     <p className="">
-    //       {topic.description && topic.description.length < 100 ? (
-    //         <p>{topic.description}</p>
-    //       ) : (
-    //         <div>
-    //           <p id="description">{ topic.description  }</p>
-    //           <button
-    //             className="text-red-500 cursor-pointer"
-    //             onClick={() => {
-    //               if (!readMore) {
-    //                 setReadMore(true);
-    //                 document.getElementById("description").innerHTML =
-    //                   toString(topic.description).slice(0,100)
-    //               } else {
-    //                 setReadMore(false);
-    //                 document.getElementById("description").innerHTML =
-    //                   topic.description;
-    //               }
-    //             }}>
-    //             ...read more
-    //           </button>
-    //         </div>
-    //       )}
-    //     </p>
-    //     <p className="">{topic?.category}</p>
-    //     <p className="">
-    //       {topic.autor ? "By" : ""} {topic?.author}
-    //     </p>
-
-    //     {topic.link ? (
-    //       <div className="flex justify-between px-2 pb-2">
-    //         <a href={topic?.link} target="_blank">
-    //           <button className="bg-gray-200 text-black font-bold px-8 rounded m-1">
-    //             <FontAwesomeIcon icon={faLink} />
-    //           </button>
-    //         </a>
-    //         <div>
-    //           {/* <button
-    //             className="bg-gray-200 text-black font-bold px-2 rounded m-1"
-    //             onClick={addToFavorites}>
-    //             {!isFavorite ? (
-    //               <FontAwesomeIcon icon={faHeart} />
-    //             ) : (
-    //               <FontAwesomeIcon icon={faHeart} className="text-red-500" />
-    //             )}
-    //           </button> */}
-    //           <div
-    //             className="bg-gray-200 text-black font-bold px-2 rounded w-10 m-auto mt-2 mb-2"
-    //             onClick={unFavorite}>
-    //             <FontAwesomeIcon icon={faTrash} className="" />
-    //           </div>
-    //           ;
-    //         </div>
-    //       </div>
-    //     ) : (
-    //       ""
-    //     )}
-    //   </div>
-    // </>
     <>
       <div className="w-50 h-auto border p-1 m-2 shadow-lg cursor-pointer text-center">
         <p>{topic?.type}</p>

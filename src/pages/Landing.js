@@ -15,12 +15,12 @@ export const Landing = () => {
       </header>
       <main>
         <Link to="/search">
-          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3 categories border-black border-dashed">
-            <h3 className="text-4xl">
-              <FontAwesomeIcon icon={faList} className="h-5 mb-1.5" />{" "}
+          <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3  border-black border-dashed ">
+            <h3 className="text-4xl ">
+              <FontAwesomeIcon icon={faList} className="h-5 mb-1.5 mr-2" />
               Categoires
             </h3>
-            <h2 className="text-xl font-bold ">
+            <h2 className="text-2xl font-bold categories">
               <FontAwesomeIcon icon={faLink} className="mr-1" />
               440 links for vegan studies, movies, books, & more!
             </h2>
@@ -38,8 +38,8 @@ export const Landing = () => {
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">Donate</h3>
             <p className="text-lg">
-              Please support our projects for saving animals and
-              supporting new vegans!
+              Please support our projects for saving animals and supporting new
+              vegans!
             </p>
           </div>
         </Link>
@@ -47,7 +47,7 @@ export const Landing = () => {
           <div className="w-50 h-contain border m-2 shadow-lg cursor-pointer text-center p-3">
             <h3 className="text-4xl">Get Funding for your Activism!</h3>
             <p className="text-lg">
-             Up to $1000 USD in grants for animal rights activism! 🌱🐤💕
+              Up to $1000 USD in grants for animal rights activism! 🌱🐤💕
             </p>
           </div>
         </a>
