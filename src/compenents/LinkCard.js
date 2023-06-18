@@ -44,15 +44,13 @@ else {
       <div className="w-50 h-auto border p-1 px-3 m-2 shadow-lg cursor-pointer text-center">
         <h3 className="p-1">{topic.name}</h3>
 
-
         {topic.description.length > 100 ? (
-
           <>
             <div>
               <p>{description}</p>
               <button
-                className="text-indigo-950 cursor-pointer rajdhani"
-                onClick={ () => {
+                className="text-indigo-700 cursor-pointer rajdhani"
+                onClick={() => {
                   if (!readMore) {
                     setReadMore((prev) => !prev);
                     // document.getElementById("description").innerText =

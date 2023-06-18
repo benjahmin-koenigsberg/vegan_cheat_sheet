@@ -50,11 +50,15 @@ export const PodcastLinks = () => {
       <div className="flex-col text-2xl text-center p-1 bg-slate-200">
         <h1 className="">{header}</h1>
       </div>
-      <div onClick={upDatePage}>
-        {pageTopics?.map((topic, index) => (
-          <LinkCard key={index} topic={topic} />
-        ))}
-      </div>
+      {pageTopics.length === 0 ? (
+        ""
+      ) : (
+        <div onClick={upDatePage}>
+          {pageTopics?.map((topic, index) => (
+            <LinkCard key={index} topic={topic} />
+          ))}
+        </div>
+      )}
       <div className="mt-10"></div>
     </div>
   );

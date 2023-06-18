@@ -5,12 +5,14 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import trash from "../trash.wav";
 
 function FavoritesCard({ topic, setPageTopics, pageTopics }) {
 
   const [readMore, setReadMore] = useState(false);
-  const abrieve = topic?.description.slice(0, 100);
+  const abrieve = topic?.description.slice(0, 100) + '...';
   const [description, setDescription] = useState(abrieve);
 
   const audio = new Audio(trash);
@@ -44,7 +46,7 @@ function FavoritesCard({ topic, setPageTopics, pageTopics }) {
             <div>
               <p>{description}</p>
               <button
-                className="text-indigo-950 cursor-pointer rajdhani"
+                className="text-indigo-700 cursor-pointer rajdhani"
                 onClick={() => {
                   if (!readMore) {
                     setReadMore((prev) => !prev);
@@ -60,6 +62,11 @@ function FavoritesCard({ topic, setPageTopics, pageTopics }) {
                   }
                 }}>
                 {!readMore ? "...read more" : "read less"}
+                {/* {!readMore ? (
+                  <FontAwesomeIcon icon={faArrowDown} />
+                ) : (
+                  <FontAwesomeIcon icon={faArrowUp} />
+                )} */}
               </button>
             </div>
           </>
