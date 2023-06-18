@@ -14,8 +14,9 @@ export const HomeLinks = () => {
       const selectedTopics = homeLinks.filter(
         (topic) => topic.type === e.target.innerText
       );
-      setHeader(e.target.innerText);
-      setPageTopics(selectedTopics);
+      setTimeout( ()=>{
+         setHeader(e.target.innerText)
+        setPageTopics(selectedTopics)}, 100 )
     } else {
       return;
     }

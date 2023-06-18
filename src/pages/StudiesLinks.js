@@ -25,7 +25,7 @@ export const StudiesLinks = () => {
   };
 
   const refreshTopics = () => {
-    setPageTopics([]);
+    setPageTopics(studyTopics);
     setHeader("");
   };
 
@@ -34,9 +34,9 @@ export const StudiesLinks = () => {
       <header className="w-screen h-10px bg-green-500 text-center p-2">
         <h1 className="text-2xl rajdhani">STUDIES</h1>
 
-        {header ? (
+        { header ? (
           <button
-            onClick={refreshTopics}
+            onClick={ refreshTopics }
             className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full">
             Back
           </button>
