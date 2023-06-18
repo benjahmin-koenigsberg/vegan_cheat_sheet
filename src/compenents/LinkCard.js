@@ -12,6 +12,8 @@ const audio = new Audio(click);
 
 const [isFavorite, setIsFavorite] = useState(false)
 const [ readMore, setReadMore ] = useState(false)
+const abrieve = topic.description.slice(0,100)
+const [ description, setDescription] = useState(abrieve)
 
 const addToFavorites = () => {
 
@@ -39,32 +41,39 @@ else {
 
   return (
     <>
-      <div className="w-50 h-auto border p-1 m-2 shadow-lg cursor-pointer text-center">
+      <div className="w-50 h-auto border p-1 px-3 m-2 shadow-lg cursor-pointer text-center">
         <h3 className="p-1">{topic.name}</h3>
-        <p className="">
-          {topic.description.length < 100 ? (
-            <p>{topic.description}</p>
-          ) : (
+
+
+        {topic.description.length > 100 ? (
+
+          <>
             <div>
-              <p id="description" className='px-4'>{topic.description.slice(0, 100)}</p>
+              <p>{description}</p>
               <button
                 className="text-indigo-950 cursor-pointer rajdhani"
-                onClick={() => {
+                onClick={ () => {
                   if (!readMore) {
-                    setReadMore(true);
-                    document.getElementById("description").innerHTML =
-                      topic?.description;
+                    setReadMore((prev) => !prev);
+                    // document.getElementById("description").innerText =
+                    //   topic?.description;
+                    setDescription(topic.description);
                   } else {
-                    setReadMore(false);
-                    document.getElementById("description").innerHTML =
-                      topic?.description.slice(0, 100) + '...';
+                    setReadMore((prev) => !prev);
+                    // document.getElementById("description").innerText =
+                    //   topic?.description.slice(0, 100);
+                    // const abrieve = topic.description.slice(1, 100);
+                    setDescription(abrieve);
                   }
                 }}>
                 {!readMore ? "...read more" : "read less"}
               </button>
             </div>
-          )}
-        </p>
+          </>
+        ) : (
+          <p>{topic.description}</p>
+        )}
+
         <p className="">{topic?.category}</p>
         <p className="">
           {topic.autor ? "By" : ""} {topic?.author}

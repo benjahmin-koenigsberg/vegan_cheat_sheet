@@ -67,9 +67,9 @@ useEffect(()=>{
             </Link>
           )}
           <button
-          onClick={clearFavs}
-          className="bg-slate-500 w-32 m-auto hover:bg-blue-700 text-white text-sm font-bold py-1  rounded-full">
-          Clear All
+            onClick={clearFavs}
+            className="bg-slate-500 w-32 m-auto hover:bg-blue-700 text-white text-sm font-bold py-1  rounded-full">
+            Clear All
           </button>
         </div>
       </header>
@@ -77,18 +77,24 @@ useEffect(()=>{
       <div className="flex-col text-2xl text-center p-1 bg-slate-200">
         <h1 className="">{header}</h1>
       </div>
-      <div
-      //onClick={upDatePage}
-      >
-        {pageTopics.map((topic, index) => (
-          <FavoritesCard
-            key={index}
-            topic={topic}
-            setPageTopics={setPageTopics}
-            pageTopics={pageTopics}
-          />
-        ))}
-      </div>
+
+      {pageTopics.length === 0 ? (
+        <h1 className="text-3xl rajdhani text-center">No Favorites</h1>
+      ) : (
+        <div
+        //onClick={upDatePage}
+        >
+          {pageTopics.map((topic, index) => (
+            <FavoritesCard
+              key={index}
+              topic={topic}
+              setPageTopics={setPageTopics}
+              pageTopics={pageTopics}
+            />
+          ))}
+        </div>
+      )}
+
       {/* <button
         onClick={clearFavs}
         className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-2 rounded-full justify-center m-auto w-fit mb-2">
