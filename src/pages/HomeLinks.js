@@ -14,9 +14,8 @@ export const HomeLinks = () => {
       const selectedTopics = homeLinks.filter(
         (topic) => topic.type === e.target.innerText
       );
-      setTimeout( ()=>{
          setHeader(e.target.innerText)
-        setPageTopics(selectedTopics)}, 100 )
+        setPageTopics(selectedTopics)
     } else {
       return;
     }
@@ -48,14 +47,18 @@ export const HomeLinks = () => {
       <div className="flex-col text-2xl text-center p-1 bg-slate-200">
         <h1 className="">{header}</h1>
       </div>
-
       {pageTopics.length === 0 ? (
         ""
       ) : (
         <div onClick={upDatePage}>
-          {pageTopics?.map((topic, index) => (
+          {pageTopics.length === 0 ? <h1>Loading...</h1> :  
+          pageTopics?.map((topic, index) => (
             <LinkCard key={index} topic={topic} />
-          ))}
+          )) }
+          {/* {
+          pageTopics?.map((topic, index) => (
+            <LinkCard key={index} topic={topic} />
+          ))} */}
         </div>
       )}
 
