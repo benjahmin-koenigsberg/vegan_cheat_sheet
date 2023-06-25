@@ -18,8 +18,10 @@ export const BookLinks = () => {
        );
        setHeader(e.target.innerText);
         if (selectedTopics.length > 0) setPageTopics(selectedTopics);
-     } else {
-       return;
+     }
+     else {
+      setTimeout(upDatePage, 1000)
+       //return;
      }
    };
 
