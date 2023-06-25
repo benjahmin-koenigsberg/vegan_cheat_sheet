@@ -17,7 +17,7 @@ export const BookLinks = () => {
          (topic) => topic.type === e.target.innerText
        );
        setHeader(e.target.innerText);
-       setPageTopics(selectedTopics);
+        if (selectedTopics.length > 0) setPageTopics(selectedTopics);
      } else {
        return;
      }
