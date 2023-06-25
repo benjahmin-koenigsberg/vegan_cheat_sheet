@@ -15,6 +15,7 @@ export const HomeLinks = () => {
         (topic) => topic.type === e.target.innerText
       );
          setHeader(e.target.innerText)
+         if (selectedTopics.length > 0)
         setPageTopics(selectedTopics)
     } else {
       return;
@@ -51,7 +52,7 @@ export const HomeLinks = () => {
         ""
       ) : (
         <div onClick={upDatePage}>
-          {pageTopics.length === 0 ? <h1>Loading...</h1> :  
+          {pageTopics.length === 0 ? <h1>Loading...</h1> :
           pageTopics?.map((topic, index) => (
             <LinkCard key={index} topic={topic} />
           )) }
